@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.14)  14 SEP 2021 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.14)  14 SEP 2021 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,8 +1217,8 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 326.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 343.
 
-[18]
-<../../figures/fig1.png, id=285, 668.4975pt x 412.54124pt>
+[18] [19]
+<../../figures/fig1.png, id=292, 668.4975pt x 412.54124pt>
 File: ../../figures/fig1.png Graphic file (type png)
 <use ../../figures/fig1.png>
 Package pdftex.def Info: ../../figures/fig1.png  used on input line 362.
@@ -1228,15 +1228,15 @@ Overfull \hbox (117.48415pt too wide) in paragraph at lines 362--363
  [][] 
  []
 
-[19] [20 <../../figures/fig1.png>] [21
+[20 <../../figures/fig1.png>] [21] [22
 
-] [22] [23] [24] [25]
-<../../figures/fig2.pdf, id=328, 794.97pt x 614.295pt>
+] [23] [24] [25] [26]
+<../../figures/fig2.pdf, id=332, 794.97pt x 614.295pt>
 File: ../../figures/fig2.pdf Graphic file (type pdf)
 <use ../../figures/fig2.pdf>
 Package pdftex.def Info: ../../figures/fig2.pdf  used on input line 551.
 (pdftex.def)             Requested size: 469.76819pt x 363.00267pt.
-<../../figures/fig3.pdf, id=329, 614.295pt x 794.97pt>
+<../../figures/fig3.pdf, id=333, 614.295pt x 794.97pt>
 File: ../../figures/fig3.pdf Graphic file (type pdf)
 <use ../../figures/fig3.pdf>
 Package pdftex.def Info: ../../figures/fig3.pdf  used on input line 565.
@@ -1256,15 +1256,15 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 575.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 575.
 
-[26
+[27
 
-] [27 <../../figures/fig2.pdf>] [28 <../../figures/fig3.pdf>] [29] [30] [31] [3
-2] [33] [34] [35] [36] [37] [38
+] [28 <../../figures/fig2.pdf>] [29 <../../figures/fig3.pdf>] [30] [31] [32] [3
+3] [34] [35] [36] [37] [38] [39
 
-] [39] [40
+] [40] [41
 
-] [41] [42] [43] [44] [45] [46] AED endfloat: Processing end Figures and Tables
-[47] (./rff_manuscript.aux)
+] [42] [43] [44] [45] [46] [47] AED endfloat: Processing end Figures and Tables
+[48] (./rff_manuscript.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1272,10 +1272,10 @@ Package rerunfilecheck Info: File `rff_manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: 01952FBAC2736042B685B9F92A0D5901;6101.
  ) 
 Here is how much of TeX's memory you used:
- 25747 strings out of 480559
- 467881 string characters out of 5901864
- 817761 words of memory out of 5000000
- 42619 multiletter control sequences out of 15000+600000
+ 25752 strings out of 480559
+ 467918 string characters out of 5901864
+ 817830 words of memory out of 5000000
+ 42623 multiletter control sequences out of 15000+600000
  491132 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,11n,103p,2458b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1296,10 +1296,10 @@ mf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/Brad/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/Brad/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Brad/AppData/Roaming/
 TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on rff_manuscript.pdf (47 pages, 428300 bytes).
+Output written on rff_manuscript.pdf (48 pages, 428933 bytes).
 PDF statistics:
- 656 PDF objects out of 1000 (max. 8388607)
- 565 compressed objects within 6 object streams
- 208 named destinations out of 1000 (max. 500000)
+ 661 PDF objects out of 1000 (max. 8388607)
+ 569 compressed objects within 6 object streams
+ 209 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
