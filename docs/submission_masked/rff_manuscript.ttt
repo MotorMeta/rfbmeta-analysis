@@ -1,0 +1,187 @@
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item \textit{Note.}
+\item n100 = sample size for 100\% feedback group; n2 = sample size for reduced frequency group; Var = variance of Hedges' g estimate. Only data from primary measures are presented.
+\end{TableNotes}
+\begin{longtable}[l]{lrllllrrrr}
+\caption{\label{tab:table1}Characteristics and Effect Sizes of Included Studies.}\\
+\toprule
+Authors & Year & Age & Skill & Task & Time & n100 & n2 & Var & g\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:table1}Characteristics and Effect Sizes of Included Studies. \textit{(continued)}}\\
+\toprule
+Authors & Year & Age & Skill & Task & Time & n100 & n2 & Var & g\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
+Agethen \& Krause & 2016 & Adult & Novice & Stable-constant & Acquisition & 12 & 12 & 0.19 & -1.27\\
+\addlinespace
+Agethen \& Krause & 2016 & Adult & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & -0.08\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.28\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.20 & 0.88\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & -0.42\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.29\\
+\addlinespace
+Aoyagi et al. & 2019 & Adult & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.14\\
+\addlinespace
+Aoyagi et al. & 2019 & Adult & Novice & Stable-constant & DelayRet & 15 & 15 & 0.13 & 0.37\\
+\addlinespace
+Badets \& Blandin & 2010 & Adult & Novice & Stable-variable & ImmRet & 12 & 12 & 0.18 & -1.01\\
+\addlinespace
+Badets \& Blandin & 2010 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.17 & -0.69\\
+\addlinespace
+Badets \& Blandin & 2012 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.16 & 0.59\\
+\addlinespace
+Badets \& Blandin & 2012 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.17 & 0.69\\
+\addlinespace
+Blandin, Toussaint \& Shea & 2008 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.58\\
+\addlinespace
+Bruechert et al. & 2003 & Adult & Novice & Stable-constant & Acquisition & 12 & 12 & 0.17 & 0.90\\
+\addlinespace
+Bruechert et al. & 2003 & Adult & Novice & Stable-constant & DelayRet & 12 & 12 & 0.19 & 1.31\\
+\addlinespace
+Burtner et al. & 2014 & Child & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.60\\
+\addlinespace
+Burtner et al. & 2014 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.22 & -1.14\\
+\addlinespace
+da Silva, Pereira-Monfredini \& Teixeira & 2017 & Child & Novice & Stable-constant & ImmRet & 10 & 10 & 0.24 & -1.51\\
+\addlinespace
+da Silva, Pereira-Monfredini \& Teixeira & 2017 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.24 & 1.57\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & Acquisition & 15 & 15 & 0.17 & 1.54\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & Acquisition & 15 & 15 & 0.17 & 1.59\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.11\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.60\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & Acquisition & 14 & 14 & 0.14 & -0.61\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & ImmRet & 14 & 14 & 0.13 & 0.10\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & DelayRet & 14 & 14 & 0.22 & -2.14\\
+\addlinespace
+Goh, Kantak \& Sullivan & 2012 & Child & Novice & Stable-constant & DelayRet & 10 & 9 & 0.19 & -0.17\\
+\addlinespace
+Goh, Kantak \& Sullivan & 2012 & Adult & Novice & Stable-constant & DelayRet & 10 & 9 & 0.19 & 0.12\\
+\addlinespace
+Guadagnoli \& Kohl & 2001 & Adult & Novice & Stable-constant & DelayRet & 16 & 16 & 0.13 & 0.97\\
+\addlinespace
+Guadagnoli et al. & 2002 & Older & Novice & Stable-constant & ImmRet & 10 & 10 & 0.20 & 0.73\\
+\addlinespace
+Guay et al. & 1999 & Adult & Novice & Stable-constant & ImmRet & 10 & 10 & 0.19 & -0.66\\
+\addlinespace
+Guay et al. & 1999 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.18 & 0.11\\
+\addlinespace
+Keller et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 11 & 12 & 0.16 & -0.06\\
+\addlinespace
+Kohl \& Guadagnoli & 1996 & Adult & Novice & Stable-constant & DelayRet & 12 & 24 & 0.12 & 0.05\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & Acquisition & 24 & 24 & 0.08 & -0.21\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & ImmRet & 24 & 24 & 0.08 & -0.37\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & DelayRet & 24 & 24 & 0.08 & -0.50\\
+\addlinespace
+McCullagh \& Little & 1990 & Adult & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.32\\
+\addlinespace
+McCullagh \& Little & 1990 & Adult & Novice & Stable-constant & DelayRet & 15 & 15 & 0.13 & 0.07\\
+\addlinespace
+McKay \& Ste-Marie & 2020 & Adult & Novice & Stable-constant & Acquisition & 34 & 35 & 0.05 & 0.17\\
+\addlinespace
+McKay \& Ste-Marie & 2020 & Adult & Novice & Stable-constant & DelayRet & 34 & 35 & 0.05 & -0.28\\
+\addlinespace
+Rangathan \& Newell & 2009 & Adult & Novice & Stable-constant & Acquisition & 6 & 6 & 0.30 & -0.57\\
+\addlinespace
+Rangathan \& Newell & 2009 & Adult & Novice & Stable-constant & ImmRet & 6 & 6 & 0.28 & -0.08\\
+\addlinespace
+Shewokis, Kennedy, \& Marsh & 2000 & Adult & Novice & Stable-constant & Acquisition & 8 & 8 & 0.23 & -0.40\\
+\addlinespace
+Shewokis, Kennedy, \& Marsh & 2000 & Adult & Novice & Stable-constant & DelayRet & 8 & 8 & 0.22 & -0.12\\
+\addlinespace
+Steinhauer \& Grayhack & 2000 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.20 & 0.79\\
+\addlinespace
+Steinhauer \& Grayhack & 2000 & Adult & Novice & Stable-constant & ImmRet & 10 & 10 & 0.19 & 0.52\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Child & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.60\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.18 & 0.16\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.22 & -1.14\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.42\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & Acquisition & 17 & 17 & 0.13 & 1.02\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & ImmRet & 17 & 17 & 0.14 & 1.36\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & DelayRet & 17 & 17 & 0.16 & 1.74\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & ImmRet & 17 & 17 & 0.11 & 0.30\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & DelayRet & 29 & 29 & 0.07 & 0.65\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & DelayRet & 23 & 23 & 0.09 & 0.74\\
+\addlinespace
+Wu et al. & 2011 & Adult & Novice & Stable-variable & Acquisition & 41 & 41 & 0.05 & -0.51\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & ImmRet & 12 & 12 & 0.16 & -0.64\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & ImmRet & 12 & 12 & 0.16 & 0.13\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & -0.45\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & 0.46\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & Acquisition & 36 & 36 & 0.05 & 0.29\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & ImmRet & 36 & 36 & 0.06 & 0.37\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & DelayRet & 36 & 36 & 0.06 & 0.49\\
+\addlinespace
+Wulf, Schmidt \& Deubel & 1993 & Adult & Novice & Stable-variable & Acquisition & 19 & 19 & 0.11 & 0.59\\
+\addlinespace
+Wulf, Schmidt \& Deubel & 1993 & Adult & Novice & Stable-variable & DelayRet & 19 & 19 & 0.10 & 0.33\\
+\addlinespace
+Yamamoto et al. & 2019 & Adult & Novice & In motion-constant & DelayRet & 9 & 7 & 0.24 & -0.59\\
+\addlinespace
+Yamamoto et al. & 2019 & Adult & Experienced & In motion-constant & DelayRet & 7 & 9 & 0.23 & -0.39\\
+\addlinespace
+Zamini et al. & 2015 & Child & Novice & Stable-constant & DelayRet & 7 & 7 & 0.38 & 1.92\\*
+\end{longtable}
+\end{ThreePartTable}
+\efloatseparator
+ 
+\begin{longtable}[l]{>{\raggedright\arraybackslash}p{6.5cm}>{\raggedright\arraybackslash}p{6.5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\caption{\label{tab:table2}Reasons for Deviations from Preregistration}\\
+\toprule
+Preregistration & Deviation & Reason\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:table2}Reasons for Deviations from Preregistration \textit{(continued)}}\\
+\toprule
+Preregistration & Deviation & Reason\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+Investigate sample in Kantak \& Winstein (2012) for publication bias. & We did not re-analyze the Kantak \& Winstein sample. & The Kantak \& Winsten (2012) study sampled a variety of practice and feedback interventions that we suspected would be heterogenous in effect. Upon reflection, we felt that applying publication bias tests with this sample would be inappropriate.\\
+\addlinespace
+Outcome measure priority list did not include measure total error (E). & We added E to our priority list in the fourth position. & We failed to anticipate E as a measure when constructing our priority list. Because E provides an overall error score, we placed it above component error scores like absolute and relative timing error.\\
+\addlinespace
+Standardized mean change from immediate to delayed retention sensitivity analysis. & We did not include any analyses of standardized mean change. & We did not have access to the raw data from any study that included both an immediate and delayed retention test and were therefore unable to calculate a range of plausible correlation statistics for this specific comparison. Based on our multilevel analysis and additional sensitivity analyses, we felt this additional sensitivity analysis was unnecessary.\\
+\addlinespace
+Prespecified analysis script & The final analysis script included substantially more data wrangling and sensitivity analyses than originally included. Some of the variables took on different names than originally specified. & Analyzing the data as thoroughly as possible required more code than initially developed. All the preregistered analyses remained in the final code.\\*
+\end{longtable}
