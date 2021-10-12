@@ -4,7 +4,7 @@
 %
 \documentclass[
   english,
-  man,mask,floatsintext]{apa7}
+  man, donotrepeattitle,floatsintext]{apa7}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{ifxetex,ifluatex}
@@ -38,6 +38,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Meta-analysis of reduced relative feedback frequency effect on motor learning and performance},
+  pdfauthor={Brad McKay1,2, Julia Hussien1, Mary-Anne Vinh1, Alexandre Mir-Orefice1, Hugh Brooks1, \& Diane M. Ste-Marie1},
   pdflang={en-EN},
   pdfkeywords={Feedback frequency, knowledge of results, knowledge of performance, guidance hypothesis, performance-learning distinction, motor learning, meta-analysis},
   hidelinks,
@@ -192,14 +193,30 @@ Correspondence concerning this article should be addressed to Brad McKay, 1280 M
 
 \abstract{
 A fundamental motor learning principle conveyed in textbooks is that augmented terminal feedback frequency differentially affects motor learning and performance. The guidance hypothesis predicts that relative to a reduced frequency of feedback, providing learners with feedback following every practice trial enhances practice performance but degrades subsequent motor learning. This change in effectiveness for each relative feedback frequency is called a reversal effect, and because it is thought that practice variables can have distinct impacts on learning and performance, delayed retention tests are considered the gold standard in motor learning research. The objectives of this meta-analysis were to a) synthesize the available evidence regarding feedback frequency, performance, and motor learning to test whether there are significant changes in effectiveness from acquisition and immediate retention to delayed retention, b) evaluate potential moderators of these effects, and c) investigate the potential influence of publication bias on this literature. We screened 1662 articles found in PubMed and PsycINFO databases as well as with reference tracing and a targeted author search. A final sample of 61 eligible papers were included in the primary analysis (\emph{k} = 75, \emph{N} = 2228). Results revealed substantial heterogeneity but no significant moderators, high levels of uncertainty, and no significant effect of reduced feedback frequency at any time point. Further, multilevel analyses revealed no evidence of a significant change in effect from acquisition or immediate retention to delayed retention. Z-curve analysis suggested the included studies were severely underpowered. These results suggest that robust evidence regarding feedback frequency and motor learning is lacking.
-
-Public Significance Statement: This meta-analysis suggests that the effect of feedback frequency on motor learning and performance is uncertain. Whether the impact of feedback frequency changes from acquisition and immediate retention to delayed retention is also uncertain. Motor learning principles based on severely underpowered experiments may be unreliable.
 }
 
 
 
 \begin{document}
 \maketitle
+
+\textbf{Highlights}
+
+\begin{itemize}
+\tightlist
+\item
+  The available evidence does not indicate a significant effect of reduced relative feedback frequency on motor learning or performance.
+\item
+  There effect of reduced relative feedback frequency does not appear to change significantly from acquisition to retention.
+\item
+  There is evidence of substantial heterogeneity in the literature although the source of the heterogeneity remains unaccounted for.
+\item
+  The studies reviewed in this meta-analysis appear to be severely underpowered.
+\item
+  The guidance hypothesis is not supported by the extant research.
+\end{itemize}
+
+\newpage
 
 In their seminal review, Bilodeau and Bilodeau (1961) proclaimed feedback as the most impactful variable contributing to motor learning and performance, stating ``\ldots{} there is no improvement without {[}feedback{]}, progressive improvement with it, and deterioration after its withdrawal'' (p.250). Salmoni, Schmidt, and Walter (1984) agreed that feedback is a critical determinant of motor performance, but suggested ironic effects on motor learning. In what is now widely regarded as the ``Guidance Hypothesis,'' Salmoni et al suggested that feedback functions much like physical guidance, influencing motor performance toward the goal outcome but undermining the development of intrinsic error detection and correction processes that ostensibly underlie sustained motor learning. A key prediction of the guidance hypothesis is that providing feedback following each trial enhances performance during acquisition but degrades performance on a no-feedback retention test, relative to providing feedback at a reduced relative frequency. Although the primary tenets of the guidance hypothesis have been widely accepted in some form by motor learning researchers (e.g., Lee \& Carnahan, 2021; Magill \& Anderson, 2012; Ong \& Hodges, 2020; Sigrist, Rauter, Riener, \& Wolf, 2013), experimental evidence has been mixed, fueling debate with respect to the optimal scheduling of feedback for motor learning (e.g., Wulf \& Lewthwaite, 2016; Wulf \& Shea, 2004).
 
@@ -272,7 +289,7 @@ Data were collected using a data collection form we developed through early pilo
 
 Outcome data were extracted according to a prespecified hierarchy. When available, means and standard deviations were selected for each outcome of interest at each time point of interest. If standard deviations were unavailable standard errors were selected. When means were unavailable, \emph{F} statistics (or \emph{t} statistics) were extracted. When an analysis of covariance was the primary analysis reported, the \emph{F} statistic and the correlation between the covariate (pre-test in all instances) and the outcome measure was extracted.
 
-After all conflicts between researcher pairs had been resolved, XX combined the data from the three pairs of researchers into a comma separated master datafile. Version control was ensured by saving changes to the master file as a new, date-specific file. Frequently, articles did not provide sufficient detail to code for moderators or extract data required for calculation of effect size estimates. When data were missing, AMO, HB, and MV contacted corresponding authors and requested access to the raw data or the specific data that were unavailable. If no response was received, a follow-up email was sent approximately one month after the first attempt. If the authors were able to provide the requested data, XX added it to the master data file in an updated version.
+After all conflicts between researcher pairs had been resolved, XX combined the data from the three pairs of researchers into a comma separated master data file. Version control was ensured by saving changes to the master file as a new, date-specific file. Frequently, articles did not provide sufficient detail to code for moderators or extract data required for calculation of effect size estimates. When data were missing, AMO, HB, and MV contacted corresponding authors and requested access to the raw data or the specific data that were unavailable. If no response was received, a follow-up email was sent approximately one month after the first attempt. If the authors were able to provide the requested data, XX added it to the master data file in an updated version.
 
 If outcome data were still missing after outreach to authors, figures that included error bars were digitized using WebPlotDigitizer 4.4 (Rohatgi, 2020). The digitization process produced values that were precise to the pixel, therefore absolute agreement between independent coders was rare. Typically, results between coders were similar and when large conflicts were identified those results were re-digitized. Each value was averaged across coders and XX added the mean result to an updated version of the master data file.
 
@@ -282,11 +299,11 @@ If outcome data were still missing after outreach to authors, figures that inclu
 \hypertarget{outcomes-collected}{%
 \paragraph{Outcomes Collected}\label{outcomes-collected}}
 
-We sought objective measures of motor skill performance for inclusion in the meta-analysis. Such measures included error scores, such as absolute error and variable error, as well as outcome measures such as movement time and movement form. We expected many studies would report multiple outcome measures at multiple time-points. For example, an individual study might report results for absolute error, variable error, and movement form, each at acquisition, immediate retention, and delayed retention. For our primary analyses, we selected the outcome measure that corresponded to the information provided as feedback during acquisition. For example, if participants received feedback about their absolute timing error during acquisition, then absolute timing error was the primary outcome measure of interest. We focused on acquisition, immediate retention, and delayed retention timepoints for our primary analyses, although if delayed transfer tests were reported we extracted those data as well. If feedback did not map directly onto an outcome measure, then we followed a preregistered priority list to select the most relevant outcome available, ordered as: (1) absolute error, (2) root mean square error, (3) absolute constant error, (4) total error, (5) absolute timing error, (6) relative timing error, (7) variable error, (8), movement time, (9) movement form -- expert raters, and (10) otherwise unspecified objective performance measure reported first in research report.
+We sought objective measures of motor skill performance for inclusion in the meta-analysis. Such measures included error scores, such as absolute error and variable error, as well as outcome measures such as movement time and movement form. We expected many studies would report multiple outcome measures at multiple time-points. For example, an individual study might report results for absolute error, variable error, and movement form, each at acquisition, immediate retention, and delayed retention. For our primary analyses, we selected the outcome measure that corresponded to the information provided as feedback during acquisition. For example, if participants received feedback about their absolute timing error during acquisition, then absolute timing error was the primary outcome measure of interest. We focused on acquisition, immediate retention, and delayed retention time points for our primary analyses, although if delayed transfer tests were reported we extracted those data as well. If feedback did not map directly onto an outcome measure, then we followed a preregistered priority list to select the most relevant outcome available, ordered as: (1) absolute error, (2) root mean square error, (3) absolute constant error, (4) total error, (5) absolute timing error, (6) relative timing error, (7) variable error, (8), movement time, (9) movement form -- expert raters, and (10) otherwise unspecified objective performance measure reported first in research report.
 
 In addition to the primary dependent measure of interest, up to two additional outcome measures were collected if reported. When more than two additional outcomes were reported, we used the priority list to select the two most relevant outcomes. Secondary outcomes were analyzed as part of a series of sensitivity analyses to evaluate the impact of our dependent measure selection on the conclusions drawn from the primary analyses.
 
-If feedback frequency was an independent variable in a factorial design, we coded the main effect of feedback frequency if it did not interact with a second independent variable. If there was a statistically significant interaction at any timepoint, then we extracted the simple effects of feedback frequency at all timepoints for a given study. We excluded simple effects for levels of a second independent variable that moderated the effect of feedback frequency by including an additional, atypical element to the practice condition. For example, if an experiment crossed feedback frequency with real and sham transcranial direct current stimulation, we selected only the simple effects from the sham condition. When the same experiment included multiple reduced frequency of feedback groups, we collected data for all groups and selected the lowest non-zero frequency for primary analyses. If an experiment included multiple groups with the same frequency of feedback, we selected the group that followed a fixed, uniformly distributed schedule of feedback if one was present.
+If feedback frequency was an independent variable in a factorial design, we coded the main effect of feedback frequency if it did not interact with a second independent variable. If there was a statistically significant interaction at any time point, then we extracted the simple effects of feedback frequency at all time points for a given study. We excluded simple effects for levels of a second independent variable that moderated the effect of feedback frequency by including an additional, atypical element to the practice condition. For example, if an experiment crossed feedback frequency with real and sham transcranial direct current stimulation, we selected only the simple effects from the sham condition. When the same experiment included multiple reduced frequency of feedback groups, we collected data for all groups and selected the lowest non-zero frequency for primary analyses. If an experiment included multiple groups with the same frequency of feedback, we selected the group that followed a fixed, uniformly distributed schedule of feedback if one was present.
 
 \hypertarget{moderators-collected}{%
 \paragraph{Moderators Collected}\label{moderators-collected}}
@@ -311,12 +328,12 @@ We calculated the standardized mean difference between 100\% frequency and reduc
 
 If multiple groups could not be differentiated with respect to frequency, distribution, or pre-determinacy of schedule, those groups were combined using the Cochrane formula for combining independent groups (\url{https://handbook-5-1.cochrane.org/chapter_7/table_7_7_a_formulae_for_combining_groups.htm}). We converted standard errors to standard deviations before combining groups or calculating effect sizes by multiplying the standard error by the square root of the sample size (\(SD = SE*\sqrt{n}\)).
 
-When data were reported as group means and standard deviations for multiple acquisition or retention blocks, the raw data were required to combine those blocks due to the dependent nature of the data. When the raw data were not available for the acquisition phase, that timepoint was omitted from further analysis. If immediate retention, delayed retention, or transfer test data included multiple blocks that were not combined, means and standard deviations from the first block were selected for analysis.
+When data were reported as group means and standard deviations for multiple acquisition or retention blocks, the raw data were required to combine those blocks due to the dependent nature of the data. When the raw data were not available for the acquisition phase, that time point was omitted from further analysis. If immediate retention, delayed retention, or transfer test data included multiple blocks that were not combined, means and standard deviations from the first block were selected for analysis.
 
 \hypertarget{influential-case-analysis}{%
 \subsubsection{Influential Case Analysis}\label{influential-case-analysis}}
 
-In order to evaluate whether specific data points were excessively influential at a given timepoint, the following influence statistics were calculated using the \texttt{metafor} package in \texttt{R} (Viechtbauer, 2010): externally standardized residuals, Cook's distances, and covariance ratios. If any effect had been identified as extremely influential by the default cut-offs for these tests in `metafor,' it would have been removed from the primary analyses. However, no influential cases were identified with this procedure.
+In order to evaluate whether specific data points were excessively influential at a given time point, the following influence statistics were calculated using the \texttt{metafor} package in \texttt{R} (Viechtbauer, 2010): externally standardized residuals, Cook's distances, and covariance ratios. If any effect had been identified as extremely influential by the default cut-offs for these tests in `metafor,' it would have been removed from the primary analyses. However, no influential cases were identified with this procedure.
 
 To evaluate influential cases in the multivariate analyses, Cook's distances were calculated and values greater than .50 were considered influential. One influential case was detected, and analyses were conducted with and without the case included. None of the results changed substantively based on the inclusion or exclusion of the influential case.
 
