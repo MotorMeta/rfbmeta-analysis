@@ -53,7 +53,7 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 linenumbers       : yes
-mask              : no
+mask              : yes
 draft             : no
 
 # NEED TO BE RUNNING THE DEVELOPMENT BRANCH VERSION OF PAPAJA
