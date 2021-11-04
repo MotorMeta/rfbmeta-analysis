@@ -10,7 +10,7 @@ x   <-  prisma(found = 1557,
         full_text = 147,
         full_text_exclusions = 86, 
         qualitative = 61,
-        quantitative = 61,
+        quantitative = 32,
         width = 1600, height = 1600,
         font_size = 12)
 
