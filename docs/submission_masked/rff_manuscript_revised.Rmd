@@ -155,7 +155,7 @@ Outcome data were extracted according to a prespecified hierarchy. When availabl
 
 After all conflicts between researcher pairs had been resolved, XX combined the data from the three pairs of researchers into a comma separated master data file. Version control was ensured by saving changes to the master file as a new, date-specific file. Frequently, articles did not provide sufficient detail to code for moderators or extract data required for calculation of effect size estimates. When data were missing, AMO, HB, and MV contacted corresponding authors and requested access to the raw data or the specific data that were unavailable. If no response was received, a follow-up email was sent approximately one month after the first attempt. If the authors were able to provide the requested data, XX added it to the master data file in an updated version. 
 
-If outcome data were still missing after outreach to authors, figures that included error bars were digitized using WebPlotDigitizer 4.4 [@Rohatgi2020]. The digitization process produced values that were precise to the pixel, therefore absolute agreement between independent coders was rare. Typically, results between coders were similar and when large conflicts were identified those results were re-digitized. Each value was averaged across coders and XX added the mean result to an updated version of the master data file. 
+If outcome data were still missing after outreach to authors, figures that included error bars were digitized using WebPlotDigitizer 4.4 [@Rohatgi2020]. The digitization process produced values that were precise to the pixel, therefore absolute agreement between independent coders was rare. Typically, results between coders were similar and when large conflicts were identified those results were re-digitized. Each value was averaged across coders and XX added the mean result to an updated version of the master data file. \textcolor{red}{Studies with outcome data that could not be extracted by reading the article, emailing the authors, or digitizing the figures were omitted from further analysis.}
 
 ### Data Items
 
@@ -173,7 +173,7 @@ Information pertaining to moderator variables was also collected from each artic
 
 ## Risk of Bias Assessment Process
 
-Risk of bias for each study was evaluated using the Cochrane Risk of Bias 1.0 checklist [@Higgins2011]. Judgments were made about seven dimensions of potential risk of bias: Sequence generation, allocation concealment, blinding of participants and personnel, blinding of outcome assessment, incomplete outcome data, selective reporting of results, and other sources of bias. Each dimension received one of three judgments: Low risk, unclear, or high risk. Selective outcome reporting is difficult to evaluate by its very nature, so we defaulted to the methodological details provided by the authors and the clarity of their reporting. Typically, risk of selective outcome reporting was deemed as unclear unless the authors were explicit about collecting data that were unreported, or explicit that all data were reported. The “other sources of bias” dimension captured concerns that were shared among the authors of this review, such as if the original data analysis and/or interpretation in a paper was problematic. Each dimension of the risk of bias assessment was tested as potential moderator of the overall effect of reduced feedback frequency across time points in a series of exploratory analyses. 
+Risk of bias for each study was evaluated using the Cochrane Risk of Bias 1.0 checklist [@Higgins2011]. Judgments were made about seven dimensions of potential risk of bias: Sequence generation, allocation concealment, blinding of participants and personnel, blinding of outcome assessment, incomplete outcome data, selective reporting of results, and other sources of bias. Each dimension received one of three judgments: Low risk, unclear, or high risk. Selective outcome reporting is difficult to evaluate by its very nature, so we defaulted to the methodological details provided by the authors and the clarity of their reporting. Typically, risk of selective outcome reporting was deemed as unclear unless the authors were explicit about collecting data that were unreported, or explicit that all data were reported. The “other sources of bias” dimension captured concerns that were shared among the authors of this review, such as if the original data analysis and/or interpretation in a paper was problematic. \textcolor{red} {Since only studies included in the analysis were graded, the incomplete outcome reporting dimension was evaluated only with respect to whether outliers and/or attrition were mentioned in the paper.} Each dimension of the risk of bias assessment was tested as potential moderator of the overall effect of reduced feedback frequency across time points in a series of exploratory analyses. 
 
 ## Effect Measures
 
@@ -219,12 +219,12 @@ Our focus was on the confidence and especially prediction intervals of the estim
 
 ## Study Selection
 
-We found 1,030 records through database searching after removing duplicates. We subsequently retrieved an additional 632 articles via backward and forward citation searches as well as a targeted author search. A total of 1662 articles were screened, resulting in full-text reviews of 147 articles. A total of 61 articles were selected for analysis (see Figure \@ref(fig:fig1)).
+We found 1,030 records through database searching after removing duplicates. We subsequently retrieved an additional 632 articles via backward and forward citation searches as well as a targeted author search. A total of 1662 articles were screened, resulting in full-text reviews of 147 articles. A total of 61 articles were selected for analysis. \textcolor{red}{It was possible to calculate effect sizes for experiments from 32 of these articles.} (see Figure \@ref(fig:fig1)).
 
 (ref:fig1-caption) Flow Diagram of Study Selection.
 
-```{r fig1, echo = FALSE, fig.cap = "(ref:fig1-caption)", fig.align = "center", fig.height=800, fig.width=800, out.height = "150%", out.width="125%"}
-knitr::include_graphics("../../figures/fig1.png")
+```{r fig1, echo = FALSE, fig.cap = "(ref:fig1-caption)", fig.align = "center", fig.height=800, fig.width=800, out.height = "100%", out.width="100%"}
+knitr::include_graphics("../../figures/figure1.png")
 ```
 
 ## Study Characteristics

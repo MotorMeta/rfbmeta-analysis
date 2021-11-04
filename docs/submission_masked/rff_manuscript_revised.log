@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.3)  3 NOV 2021 11:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.3)  3 NOV 2021 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**rff_manuscript.tex
-(./rff_manuscript.tex
+**rff_manuscript_revised.tex
+(./rff_manuscript_revised.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-10-18> (c:/Users/Brad/AppData/Roaming/TinyTeX/texmf-
 dist/tex/latex/apa7/apa7.cls
@@ -1020,7 +1020,7 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box75
-) (./rff_manuscript.aux
+) (./rff_manuscript_revised.aux
 
 LaTeX Warning: Label `tab:table1' multiply defined.
 
@@ -1040,7 +1040,7 @@ LaTeX Warning: Label `tab:table1' multiply defined.
 LaTeX Warning: Label `tab:table2' multiply defined.
 
 )
-\openout1 = `rff_manuscript.aux'.
+\openout1 = `rff_manuscript_revised.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
 LaTeX Font Info:    ... okay on input line 199.
@@ -1132,9 +1132,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 199.
 LaTeX Info: Redefining \pageref on input line 199.
 LaTeX Info: Redefining \nameref on input line 199.
-(./rff_manuscript.out) (./rff_manuscript.out)
+(./rff_manuscript_revised.out) (./rff_manuscript_revised.out)
 \@outlinefile=\write6
-\openout6 = `rff_manuscript.out'.
+\openout6 = `rff_manuscript_revised.out'.
 
 
 (c:/Users/Brad/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/apa7/config/APA7eng
@@ -1220,25 +1220,23 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 342.
 LaTeX Font Warning: Command \small invalid in math mode on input line 359.
 
 [18]
-<../../figures/fig1.png, id=285, 668.4975pt x 412.54124pt>
-File: ../../figures/fig1.png Graphic file (type png)
-<use ../../figures/fig1.png>
-Package pdftex.def Info: ../../figures/fig1.png  used on input line 378.
-(pdftex.def)             Requested size: 587.23917pt x 362.39534pt.
+<../../figures/figure1.png, id=285, 459.21562pt x 806.26219pt>
+File: ../../figures/figure1.png Graphic file (type png)
+<use ../../figures/figure1.png>
+Package pdftex.def Info: ../../figures/figure1.png  used on input line 378.
+(pdftex.def)             Requested size: 370.4631pt x 650.43607pt.
 
-Overfull \hbox (117.48415pt too wide) in paragraph at lines 378--379
- [][] 
- []
+LaTeX Warning: Float too large for page by 50.40735pt on input line 383.
 
-[19] [20 <../../figures/fig1.png>] [21
+[19] [20 <../../figures/figure1.png>] [21] [22
 
-] [22] [23] [24] [25]
-<../../figures/fig2.pdf, id=328, 794.97pt x 614.295pt>
+] [23] [24] [25] [26]
+<../../figures/fig2.pdf, id=332, 794.97pt x 614.295pt>
 File: ../../figures/fig2.pdf Graphic file (type pdf)
 <use ../../figures/fig2.pdf>
 Package pdftex.def Info: ../../figures/fig2.pdf  used on input line 567.
 (pdftex.def)             Requested size: 469.76819pt x 363.00267pt.
-<../../figures/fig3.pdf, id=329, 614.295pt x 794.97pt>
+<../../figures/fig3.pdf, id=333, 614.295pt x 794.97pt>
 File: ../../figures/fig3.pdf Graphic file (type pdf)
 <use ../../figures/fig3.pdf>
 Package pdftex.def Info: ../../figures/fig3.pdf  used on input line 581.
@@ -1258,29 +1256,30 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 591.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 591.
 
-[26
+[27
 
-] [27 <../../figures/fig2.pdf>] [28 <../../figures/fig3.pdf>] [29] [30] [31] [3
-2] [33] [34] [35] [36] [37] [38
+] [28 <../../figures/fig2.pdf>] [29 <../../figures/fig3.pdf>] [30] [31] [32] [3
+3] [34] [35] [36] [37] [38] [39
 
-] [39] [40
+] [40] [41
 
-] [41] [42] [43] [44] [45] [46] AED endfloat: Processing end Figures and Tables
-[47] (./rff_manuscript.aux)
+] [42] [43] [44] [45] [46] [47] AED endfloat: Processing end Figures and Tables
+[48] (./rff_manuscript_revised.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `rff_manuscript.out' has not changed.
+Package rerunfilecheck Info: File `rff_manuscript_revised.out' has not changed.
+
 (rerunfilecheck)             Checksum: 73DF116399010A55DFF9C1AB1EA7242C;6100.
  ) 
 Here is how much of TeX's memory you used:
- 25786 strings out of 480539
- 468910 string characters out of 5901221
- 819255 words of memory out of 5000000
- 42675 multiletter control sequences out of 15000+600000
+ 25789 strings out of 480539
+ 469101 string characters out of 5901221
+ 819329 words of memory out of 5000000
+ 42677 multiletter control sequences out of 15000+600000
  491507 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,11n,103p,2458b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,11n,103p,2466b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Brad/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
 c}{c:/Users/Brad/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
 c}{c:/Users/Brad/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-maths
@@ -1299,10 +1298,10 @@ xmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/Brad/AppData/Roaming/TinyTe
 X/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/Brad/AppData/Roaming/Tin
 yTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Brad/AppData/Roaming
 /TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on rff_manuscript.pdf (47 pages, 429797 bytes).
+Output written on rff_manuscript_revised.pdf (48 pages, 432542 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 207 named destinations out of 1000 (max. 500000)
+ 664 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 208 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
