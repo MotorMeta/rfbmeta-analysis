@@ -205,14 +205,26 @@ summary(retres)
 
 mvm <- filter(prime, prime$time!="Transfer")
 
+# rename delayed retention time point "retention" so time points are both chronological
+# and alphabetical
+
+mvm$time <- recode(mvm$time, DelayRet = "Retention")
+
+# order variables for subsequent forest plot 
+
+mvm <- mvm[order(mvm$yi),]
+mvm <- mvm[order(mvm$time),]
 
 test <- rma.mv(yi, vi, mods = ~factor(time)-1, random = ~ 1| study/time, 
                data = mvm)
 test
 
+
+
 predict(test)
 
 profile.rma.mv(test)
+
 
 
 ## calculate cooks distance with 3 level model
@@ -236,16 +248,26 @@ test2<- rma.mv(yi, vi, mods = ~factor(time)-1, random = ~ 1| study/time,
 test2
 
 # create and save forest plot
+# order by time point
 
+mvm <- mvm[order(mvm$yi),]
+mvm <- mvm[order(mvm$time),]
 
-metafor::forest(test, header = "Author, Year, and Time Point", cex= 0.7,
+library(extrafont)
+loadfonts()
+
+metafor::forest(test, header = "Author, Year, and Time Point", cex= 0.7, cex.lab= .8,
                 addfit= FALSE, slab = paste0(mvm$authors, "," , mvm$year, ":" , mvm$time), 
-                xlim = c(-5.5,5), at= c(-3, -2, -1, 0, 1, 2, 3), order = "obs")
-text(2.5, -1, "Favours Reduced", cex = .7, font = 2)
-text(-2.5, -1, "Favours 100", cex = .7, font = 2)
-addpoly(acqres, row = 0, cex = .7, efac = .7,  mlab = "Acquisition Estimate", addpred = TRUE)
-addpoly(immres, row = -1, cex = .7, efac = .7, mlab = "Immediate Retention Estimate", addpred = TRUE)
-addpoly(retres, row = -2, cex = .7, efac = .7, mlab = "Delayed Retention Estimate", addpred = TRUE)
+                xlim = c(-5.5,5), at= c(-3, -2, -1, 0, 1, 2, 3), rows=c(2:35,39:106,110:180), fonts = "Roboto Condensed")
+text(2.5, -1, "Favours Reduced", cex = .8, font = 2, fonts = "Roboto Condensed")
+text(-2.5, -1, "Favours 100", cex = .8, font = 2, fonts = "Roboto Condensed")
+addpoly.default(x = .1932, ci.lb = -.1062, ci.ub = .4926, pi.lb = -1.0281, pi.ub = 1.4146,
+                row = 0, cex = .8, efac = .7,  mlab = "Acquisition Estimate", addpred = TRUE, fonts = "Roboto Condensed")
+addpoly.default(x=.0137, ci.lb = -.3006, ci.ub = .3281, pi.lb = -1.2113, pi.ub = 1.2388,
+                row = 22, cex = .8, efac = .7, mlab = "Immediate Retention Estimate", addpred = TRUE, fonts = "Roboto Condensed")
+addpoly.default(x=.1924, ci.lb = -.0453, ci.ub = .4302, pi.lb = -1.0153, pi.ub = 1.4002,
+                row = 42, cex = .8, efac = .7, mlab = "Delayed Retention Estimate", addpred = TRUE, fonts = "Roboto Condensed")
+
 
 
 
@@ -725,6 +747,62 @@ coef_test(rob, vcov = "CR2", cluster=mvm2$study)
 conf_int(rob, vcov = "CR2", cluster=mvm2$study)
 
 
+
+###### Testing the spatial error subset as requested by reviewer
+
+# recode all spatial error outcomes into one category
+
+mvm$rmeasure <- recode(mvm$measure, AE = "serror", RMSE = "serror", ACE = "serror", 
+                        E = "serror")
+
+# select only spatial error
+
+serror <- filter(mvm, mvm$rmeasure=="serror")
+
+# select only delayed retention
+
+sret <- filter(serror, serror$time=="Retention")
+
+# test moderators
+
+# age
+
+rma(yi, vi, mods = ~factor(age), data = sret)
+
+# skill
+
+rma(yi, vi, mods = ~factor(skill), data = sret)
+
+# task
+
+rma(yi, vi, mods = ~factor(task), data = sret)
+
+# faded
+
+rma(yi, vi, mods = ~factor(faded), data = sret)
+
+# yoked
+
+rma(yi, vi, mods = ~factor(yoked), data = sret)
+
+# feedback
+
+rma(yi, vi, mods = ~factor(feedback), data = sret)
+
+# trials
+
+rma(yi, vi, mods = ~ trials, data = sret)
+
+# days
+
+rma(yi, vi, mods = ~days, data = sret)
+
+# frequency 
+
+rma(yi, vi, mods = ~frequency, data = sret)
+
+
+
 ######  with measure nested in time nested in experiment
 
 
@@ -736,11 +814,13 @@ ntra <- filter(dat, dat$time!="Transfer")
 
 ntra$author.year.study <- paste(ntra$authors, ntra$year, ntra$experiment, sep = ".")
 
+
 # fit four level model
 
 sens <- rma.mv(yi, vi, mods = ~ factor(time)-1,  random = ~ 1|author.year.study/measure/time, data = ntra)
 
 sens
+
 
 # run profile analysis to check for overparamterization
 
@@ -884,17 +964,57 @@ sensmeasure <- rma.mv(yi, vi, mods = ~ time*measure,  random = ~ 1|author.year.s
 
 summary(sensmeasure)
 
+# collapse measurements into broader categories as suggested by reviewer
+
+ntra$rmeasure <- recode(ntra$measure, AE = "serror", RMSE = "serror", ACE = "serror", 
+                         E = "serror")
+
+ntra$rmeasure <- recode(ntra$rmeasure, "ABS time" = "terror", "REL time" = "terror")
+
+ntra$rmeasure <- recode(ntra$rmeasure, Other = "OTHER")
+
+sensr <- rma.mv(yi, vi, mods = ~ time*rmeasure,  random = ~ 1|author.year.study/rmeasure/time, data = ntra)
+
+sensr
+
 # with influential case removed
 
 sensmeasure2 <- rma.mv(yi, vi, mods = ~ time*measure,  random = ~ 1|author.year.study/measure/time, data = ntra2)
 
 summary(sensmeasure2)
 
+# collapse measurements and with outlier removed
+
+ntra2$rmeasure <- recode(ntra2$measure, AE = "serror", RMSE = "serror", ACE = "serror", 
+                         E = "serror")
+
+ntra2$rmeasure <- recode(ntra2$rmeasure, "ABS time" = "terror", "REL time" = "terror")
+
+ntra2$rmeasure <- recode(ntra2$rmeasure, Other = "OTHER")
+
+
+sens2r <- rma.mv(yi, vi, mods = ~ time*rmeasure,  random = ~ 1|author.year.study/rmeasure/time, data = ntra2)
+
+sens2r
+
 # measure with interaction removed
 
 sensmeasure3 <- rma.mv(yi, vi, mods = ~ measure,  random = ~ 1|author.year.study/measure/time, data = ntra)
 
 summary(sensmeasure3)
+
+# with measures collapsed and interaction removed
+
+sensr3 <- rma.mv(yi, vi, mods = ~ factor(rmeasure),  random = ~ 1|author.year.study/rmeasure/time, data = ntra)
+
+sensr3
+
+# just at delayed retention
+
+rret <- filter(ntra, ntra$time=="DelayRet")
+
+rma.mv(yi, vi, mods = ~ factor(rmeasure),  random = ~ 1|author.year.study/rmeasure, data = ntra)
+
 
 # test whether primary coded measures differ from secondary measures
 

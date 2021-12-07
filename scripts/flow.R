@@ -2,6 +2,7 @@ library(PRISMAstatement)
 library(DiagrammeRsvg)
 library(rsvg)
 
+
 x   <-  prisma(found = 1557,
         found_other = 632,
         no_dupes = 1662, 
@@ -15,6 +16,3 @@ x   <-  prisma(found = 1557,
         font_size = 12)
 
 x
-
-
-
