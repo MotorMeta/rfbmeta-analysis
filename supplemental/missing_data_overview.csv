@@ -1,0 +1,480 @@
+effect,authors,year,experiment,age,skill,task,trials,days,frequency,pub,bandwidth,faded,yoked,otherrfb,feedback,measure,primary,measure-other,irinterval,drinterval,time,n100,n2,mean100,sd100,se100,mean2,Significant?,favours
+449,"Aoyagi, Ohnishi, Yamamoto, Kado, Suzuki, Ohnishi, Hokimoto & Fukaya",2019,1,Adult,Novice,Stable-constant,80,4,50,Yes,No,No,No,,CE,AE,Yes,,,,Acquisition,15,15,,,,,No,Undetermined
+436,Badets & Blandin,2012,2,Adult,Novice,Stable-variable,300,1,33,Yes,No,No,No,,CE,AE,Yes,,,,Acquisition,,,,,,,Yes,100
+438,Badets & Blandin,2012,2.5,Adult,Novice,Stable-variable,300,1,33,Yes,No,No,No,,CE,AE,Yes,,,,Acquisition,,,,,,,Yes,100
+440,Badets & Blandin,2010,2,Adult,Novice,Stable-variable,198,2,33,Yes,No,No,No,,REL time,AE,Yes,,,,Acquisition,,,,,,,No,100
+428,"Blandin, Toussaint & Shea",2008,1,Adult,Novice,Stable-constant,198,1,33,Yes,No,No,No,,RMSE,RMSE,Yes,p,,,Acquisition,10,10,,,,,Yes,100
+430,"Blandin, Toussaint & Shea",2008,2,Adult,Novice,Stable-constant,198,1,33,Yes,No,No,No,,RMSE,RMSE,Yes,pv,,,Acquisition,11,10,,,,,Yes,100
+432,"Blandin, Toussaint & Shea",2008,3,Adult,Novice,Stable-constant,54,1,33,Yes,No,No,No,,RMSE,RMSE,Yes,,,,Acquisition,12,12,,,,,No,Undetermined
+434,"Blandin, Toussaint & Shea",2008,4,Adult,Novice,Stable-constant,396,1,33,Yes,No,No,No,,RMSE,RMSE,Yes,,,,Acquisition,12,12,,,,,No,Undetermined
+255,Butler et al,1996,1,Adult,Novice,Stable-constant,60,1,,Yes,No,No,Yes,,CE,ACE,Yes,,10,1,Acquisition,10,10,,,,,No,Undetermined
+505,"da Silva, Pereira-Monfredini & Teixeira",2017,1,Child,Novice,Stable-constant,60,1,33,Yes,No,No,No,,Form,FORM,Yes,,,,Acquisition,10,10,,,,,No,Undetermined
+78,Dunham & Mueller,1993,1,Adult,Novice,Stable-constant,30,1,50,Yes,No,No,No,,CE,AE,Yes,,10,,Acquisition,15,15,,,,,Yes,100
+136,Gandia et al,2019,1,Child,Novice,Stable-constant,12,1,67,Yes,No,No,No,,Other-qual,RMSE,Yes,,1,1,Acquisition,10,10,,,,,No,Undetermined
+563,"Goh, Kantak & Sullivan",2012,1,Child,Novice,Stable-constant,200,1,62,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,,Acquisition,10,9,,,,,No,Undetermined
+569,"Goh, Kantak & Sullivan",2012,2,Adult,Novice,Stable-constant,200,1,62,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,,Acquisition,10,9,,,,,No,Undetermined
+24,"Goodwin, Eckerson, & Voll",2001,1,Adult,Novice,Stable-constant,60,1,50,Yes,No,No,No,,CE,ACE,Yes,,,2,Acquisition,22,22,,,,,No,Undetermined
+557,Guadagnoli & Kohl,2001,1,Adult,Novice,Stable-constant,150,1,20,Yes,No,No,No,,CE,RMSE,Yes,,,,Acquisition,16,16,,,,,Yes,100
+553,"Guadagnoli, Leis, Van Gemmert & Stelmach",2002,1,Older,Novice,Stable-constant,60,1,20,Yes,No,No,No,,CE,AE,Yes,,,,Acquisition,10,10,,,,,No,Undetermined
+86,Guay et al.,1999,1,Adult,Novice,Stable-constant,80,1,20,Yes,No,No,No,,CE,ACE,Yes,,10,2,Acquisition,10,10,,,,,No,Undetermined
+307,Ho and Shea,1978,1,Adult,Novice,Stable-constant,50,1,50,Yes,No,No,No,,CE,AE,Yes,,5,,Acquisition,14,14,,,,,No,Undetermined
+299,Kohl and Guadagnoli,1996,1,Adult,Novice,Stable-constant,120,1,50,Yes,No,No,No,,Other-qual,RMSE,Yes,,,1,Acquisition,12,24,,,,,No,Undetermined
+303,Kohl and Guadagnoli,1996,2,Adult,Novice,Stable-constant,144,1,50,Yes,No,No,No,,Other-qual,RMSE,Yes,,,1,Acquisition,14,56,,,,,No,Undetermined
+291,Lai and Shea,1998,1,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,CE,ABS time,Yes,,,1,Acquisition,,,,,,,No,Undetermined
+320,Lai and Shea,1999,1,Adult,Novice,Stable-constant,80,1,50,Yes,No,No,No,,CE,ACE,Yes,,5,1,Acquisition,9,18,,,,,No,Undetermined
+329,Lai and Shea,1999,2,Adult,Novice,Stable-constant,192,1,50,Yes,No,Yes,No,,Other-percise,RMSE,Yes,,5,1,Acquisition,12,12,,,,,No,Undetermined
+519,"Nunes, Souze, Basso, Monteiro, Correa & Santos",2014,1,Older,Novice,Stable-constant,90,3,33,Yes,No,No,No,,Form,OTHER,Yes,checklist number of critical errors,,,Acquisition,,,,,,,,
+347,Parry ,2010,1,Adult,Novice,Stable-variable,54,1,33,No,No,No,No,,CE,VE,Yes,,,,Acquisition,36,36,,,,,No,Undetermined
+508,Rice & Herndez,2006,1,Adult,Novice,Stable-constant,30,1,50,Yes,No,No,No,,Other-qual,AE,Yes,Cumulative AE,,,Acquisition,8,8,,,,,No,100
+350,Sparrow,1995,1,Adult,Novice,Stable-variable,100,1,20,Yes,No,No,No,every 5th,CE,AE,Yes,,,,Acquisition,13,13,,,,,No,100
+374,Sparrow,1995,2,Adult,Novice,Stable-variable,101,1,20,Yes,No,No,No,every 5th trial,CE,AE,Yes,,,,Acquisition,13,13,,,,,No,100
+386,Sparrow,1995,3,Adult,Novice,Stable-variable,97,1,50,Yes,No,No,No,,CE,AE,Yes,,,,Acquisition,13,13,,,,,No,Reduced
+181,Sparrow & Summers,1992,1,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,Acquisition,15,15,,,,,No,Undetermined
+208,Sparrow & Summers,1992,2,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,Acquisition,13,13,32.53,,,40.61,No,100
+75,Vander Linden et al. ,1993,1,Adult,Novice,Stable-constant,100,1,50,Yes,No,No,No,,Other-precise,RMSE,Yes,,5,2,Acquisition,8,8,,,,,No,Undetermined
+43,Williams ,1992,1,Adult,Novice,Stable-constant,5,1,20,No,No,No,No,,Other-qual,ACE,Yes,,10,2,Acquisition,12,12,,,,,No,100
+129,Winstein and Schmidt,1990,1,Adult,Novice,Stable-constant,198,2,33,Yes,No,No,No,,RMSE,RMSE,Yes,,10,,Acquisition,68,68,,,,,No,100
+131,Winstein and Schmidt,1990,2,Adult,Novice,Stable-constant,192,2,50,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,,Acquisition,29,29,,,,,No,Reduced
+134,Winstein and Schmidt,1990,3,Adult,Novice,Stable-constant,192,2,50,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,,Acquisition,23,23,,,,,No,Reduced
+63,Wishart & Lee,1997,1,Adult,Novice,Stable-constant,90,1,66,Yes,No,Yes,No,,CE,ACE,Yes,,30,,Acquisition,12,12,,,,,No,Undetermined
+67,Wishart & Lee,1997,1,Older,Novice,Stable-constant,90,1,66,Yes,No,Yes,No,,CE,ACE,Yes,,30,,Acquisition,12,12,,,,,No,Undetermined
+269,Wrisberg and Wulf,1997,1,Adult,Novice,Stable-constant,90,1,67,Yes,No,No,No,,RMSE,RMSE,Yes,,,1,Acquisition,20,20,,,,,No,Reduced
+101,Wulf & Schmidt,1989,1,Adult,Novice,Stable-constant,108,1,67,Yes,No,Yes,No,,CE,REL time,Yes,,,1,Acquisition,13,13,,,,,No,Undetermined
+455,"Wulf, Chiviacowsky, Schiller & Avila",2010,1,Child,Novice,Stable-constant,30,1,33,Yes,No,No,No,int focus,Form,FORM,Yes,,,,Acquisition,12,12,,,,,No,100
+461,"Wulf, Chiviacowsky, Schiller & Avila",2010,2,Child,Novice,Stable-constant,30,1,33,Yes,No,No,No,ext focus,Form,FORM,Yes,,,,Acquisition,12,12,,,,,No,100
+113,"Wulf, Lee, & Schmidt",1994,2,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,ABS time,ACE,Yes,,5,1,Acquisition,36,36,,,,,No,100
+467,"Wulf, McConnel, Gartner & Schwarz",2002,2,Adult,Experienced,Stable-constant,30,1,33,Yes,No,No,No,int focus,Form,AE,Yes,Throwing Accuracy but did not state AE,,,Acquisition,,,,,,,Yes,Reduced
+469,"Wulf, McConnel, Gartner & Schwarz",2002,2.5,Adult,Experienced,Stable-constant,30,1,33,Yes,No,No,No,ext focus,Form,AE,Yes,Throwing Accuracy but did not state AE,,,Acquisition,,,,,,,No,100
+471,"Wulf, Schmidt & Deubel",1993,1,Adult,Novice,Stable-variable,90,1,63,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,,Acquisition,19,19,,,,,No,Reduced
+139,Zamini et al,2015,1,Child,Novice,Stable-constant,60,1,50,Yes,No,No,No,"honestly the descriptions for fb and measure were very unclear. It appears the fb was only a direction although they may have also provided a score, and the score itself appears to be an average across trials",CE,OTHER,Yes,Score,,1,Acquisition,7,7,,,,,No,100
+,,,,,,,,,,,,,,,,,,,,,,,,,Acquisition,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigNo,40,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigYes,7,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,ODR,0.175,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Fav100,18,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,FavRed,6,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Undet,23,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+259,Butler et al,1996,1,Adult,Novice,Stable-constant,60,1,,Yes,No,No,Yes,,CE,ACE,Yes,,10,1,DelayRet,10,10,,,,,No,100
+138,Gandia et al,2019,1,Child,Novice,Stable-constant,12,1,67,Yes,No,No,No,,Other-qual,RMSE,Yes,,1,1,DelayRet,10,10,,,,,No,Undetermined
+26,"Goodwin, Eckerson, & Voll",2001,1,Adult,Novice,Stable-constant,60,1,50,Yes,No,No,No,,CE,ACE,Yes,,,2,DelayRet,22,22,1.78,,,1.13,Yes,Reduced
+305,Kohl and Guadagnoli,1996,2,Adult,Novice,Stable-constant,144,1,50,Yes,No,No,No,,Other-qual,RMSE,Yes,,,1,DelayRet,14,56,,,,,Yes,Undetermined
+294,Lai and Shea,1998,1,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,CE,ABS time,Yes,,,1,DelayRet,,,,,,,No,Reduced
+326,Lai and Shea,1999,1,Adult,Novice,Stable-constant,80,1,50,Yes,No,No,No,,CE,ACE,Yes,,5,1,DelayRet,9,18,,,,,No,Undetermined
+331,Lai and Shea,1999,2,Adult,Novice,Stable-constant,192,1,50,Yes,No,Yes,No,,Other-percise,RMSE,Yes,,5,1,DelayRet,12,12,,,,,No,100
+523,"Nunes, Souze, Basso, Monteiro, Correa & Santos",2014,1,Older,Novice,Stable-constant,90,3,33,Yes,No,No,No,,Form,OTHER,Yes,checklist number of critical errors,,1,DelayRet,,,,,,,No,Reduced
+354,Sparrow,1995,1,Adult,Novice,Stable-variable,100,1,20,Yes,No,No,No,every 5th,CE,AE,Yes,,,1,DelayRet,13,13,,,,,No,Reduced
+378,Sparrow,1995,2,Adult,Novice,Stable-variable,101,1,20,Yes,No,No,No,every 5th trial,CE,AE,Yes,,,1,DelayRet,13,13,,,,,No,100
+390,Sparrow,1995,3,Adult,Novice,Stable-variable,97,1,50,Yes,No,No,No,,CE,AE,Yes,,,1,DelayRet,13,13,,,,,No,100
+183,Sparrow & Summers,1992,1,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,DelayRet,15,15,,,,,No,Undetermined
+210,Sparrow & Summers,1992,2,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,DelayRet,13,13,45.9,,,39.58,No,Reduced
+77,Vander Linden et al. ,1993,1,Adult,Novice,Stable-constant,100,1,50,Yes,No,No,No,,Other-precise,RMSE,Yes,,5,2,DelayRet,8,8,,,,,Yes,Reduced
+47,Williams ,1992,1,Adult,Novice,Stable-constant,5,1,20,No,No,No,No,,Other-qual,ACE,Yes,,10,2,DelayRet,12,12,,,,,No,100
+271,Wrisberg and Wulf,1997,1,Adult,Novice,Stable-constant,90,1,67,Yes,No,No,No,,RMSE,RMSE,Yes,,,1,DelayRet,20,20,,,,,No,Reduced
+418,"Wu, Young, Schandler, Meir, Judy, Perez & Cohen",2011,1,Adult,Novice,Stable-variable,192,1,60,Yes,No,Yes,No,,Other-percise,ACE,Yes,,,1,DelayRet,41,41,,,,,No,Undetermined
+117,"Wulf, Lee, & Schmidt",1994,2,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,ABS time,ACE,Yes,,5,1,DelayRet,36,36,,,,,No,100
+468,"Wulf, McConnel, Gartner & Schwarz",2002,2,Adult,Experienced,Stable-constant,30,1,33,Yes,No,No,No,int focus,Form,AE,Yes,Throwing Accuracy but did not state AE,,7,DelayRet,,,,,,,Yes,Reduced
+470,"Wulf, McConnel, Gartner & Schwarz",2002,2.5,Adult,Experienced,Stable-constant,30,1,33,Yes,No,No,No,ext focus,Form,AE,Yes,Throwing Accuracy but did not state AE,,7,DelayRet,,,,,,,No,100
+491,"Wulf, Schmidt & Deubel",1993,2,Adult,Novice,Stable-variable,90,1,63,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,1,DelayRet,,,516,,,558,No,100
+502,"Yamamoto, Akizuki, Kai, kano, Kobayashi & Ohashi",2019,1,Adult,Novice,In motion-constant,18,1,50,Yes,No,No,No,high skilled,Other-qual,RMSE,Yes,4 lights and sounds that correlated to their performance,,1,DelayRet,,,,,,,No,Undetermined
+504,"Yamamoto, Akizuki, Kai, kano, Kobayashi & Ohashi",2019,2,Adult,Novice,In motion-constant,18,1,50,Yes,No,No,No,low skilled,Other-qual,RMSE,Yes,6 lights and sounds that correlated to their performance,,1,DelayRet,,,,,,,No,Undetermined
+,,,,,,,,,,,,,,,,,,,,,,,,,Delayed Retention,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigNo,19,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigYes,4,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,ODR,0.210526316,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Fav100,8,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,FavRed,8,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Undet,10,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+257,Butler et al,1996,1,Adult,Novice,Stable-constant,60,1,,Yes,No,No,Yes,,CE,ACE,Yes,,10,1,ImmRet,10,10,,,,,No,Reduced
+80,Dunham & Mueller,1993,1,Adult,Novice,Stable-constant,30,1,50,Yes,No,No,No,,CE,AE,Yes,,10,,ImmRet,15,15,,,,,Yes,100
+137,Gandia et al,2019,1,Child,Novice,Stable-constant,12,1,67,Yes,No,No,No,,Other-qual,RMSE,Yes,,1,1,ImmRet,10,10,,,,,No,Undetermined
+309,Ho and Shea,1978,1,Adult,Novice,Stable-constant,50,1,50,Yes,No,No,No,,CE,AE,Yes,,5,,ImmRet,14,14,,,,,No,Undetermined
+323,Lai and Shea,1999,1,Adult,Novice,Stable-constant,80,1,50,Yes,No,No,No,,CE,ACE,Yes,,5,1,ImmRet,9,18,,,,,No,Undetermined
+330,Lai and Shea,1999,2,Adult,Novice,Stable-constant,192,1,50,Yes,No,Yes,No,,Other-percise,RMSE,Yes,,5,1,ImmRet,12,12,,,,,No,100
+521,"Nunes, Souze, Basso, Monteiro, Correa & Santos",2014,1,Older,Novice,Stable-constant,90,3,33,Yes,No,No,No,,Form,OTHER,Yes,checklist number of critical errors,5,,ImmRet,,,,,,,No,Reduced
+349,Parry ,2010,1,Adult,Novice,Stable-variable,54,1,33,No,No,No,No,,CE,VE,Yes,,10,,ImmRet,36,36,,,,,No,Undetermined
+509,Rice & Herndez,2006,1,Adult,Novice,Stable-constant,30,1,50,Yes,No,No,No,,Other-qual,AE,Yes,Cumulative AE,10,,ImmRet,8,8,,,,,No,Reduced
+352,Sparrow,1995,1,Adult,Novice,Stable-variable,100,1,20,Yes,No,No,No,every 5th,CE,AE,Yes,,2,,ImmRet,13,13,,,,,No,Undetermined
+376,Sparrow,1995,2,Adult,Novice,Stable-variable,101,1,20,Yes,No,No,No,every 5th trial,CE,AE,Yes,,2,,ImmRet,13,13,,,,,No,100
+388,Sparrow,1995,3,Adult,Novice,Stable-variable,97,1,50,Yes,No,No,No,,CE,AE,Yes,,2,,ImmRet,,,,,,,No,Reduced
+182,Sparrow & Summers,1992,1,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,ImmRet,15,15,,,,,No,Undetermined
+209,Sparrow & Summers,1992,2,Adult,Novice,Stable-constant,100,1,10,Yes,No,No,No,,Other-percise,AE,Yes,,2,1,ImmRet,13,13,29.92,,,38.51,Yes,100
+76,Vander Linden et al. ,1993,1,Adult,Novice,Stable-constant,100,1,50,Yes,No,No,No,,Other-precise,RMSE,Yes,,5,2,ImmRet,8,8,,,,,Yes,Reduced
+45,Williams ,1992,1,Adult,Novice,Stable-constant,5,1,20,No,No,No,No,,Other-qual,ACE,Yes,,10,2,ImmRet,12,12,,,,,No,100
+132,Winstein and Schmidt,1990,2,Adult,Novice,Stable-constant,192,2,50,Yes,No,Yes,No,,RMSE,RMSE,Yes,,5,,ImmRet,29,29,,,,,No,Reduced
+65,Wishart & Lee,1997,1,Adult,Novice,Stable-constant,90,1,66,Yes,No,Yes,No,,CE,ACE,Yes,,30,,ImmRet,12,12,,,,,No,Undetermined
+69,Wishart & Lee,1997,1,Older,Novice,Stable-constant,90,1,66,Yes,No,Yes,No,,CE,ACE,Yes,,30,,ImmRet,12,12,,,,,No,Undetermined
+415,"Wu, Young, Schandler, Meir, Judy, Perez & Cohen",2011,1,Adult,Novice,Stable-variable,192,1,60,Yes,No,Yes,No,,Other-percise,ACE,Yes,,10,,ImmRet,41,41,,,,,No,Undetermined
+115,"Wulf, Lee, & Schmidt",1994,2,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,ABS time,ACE,Yes,,5,1,ImmRet,36,36,,,,,No,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Immediate Retention,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigNo,18,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigYes,3,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,ODR,0.166666667,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Fav100,6,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,FavRed,6,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Undet,13,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+297,Lai and Shea,1998,1,Adult,Novice,Stable-constant,108,1,50,Yes,No,No,No,,CE,ABS time,Yes,,,1,Transfer,,,,,,,No,Undetermined
+525,"Nunes, Souze, Basso, Monteiro, Correa & Santos",2014,1,Older,Novice,Stable-constant,90,3,33,Yes,No,No,No,,Form,OTHER,Yes,checklist number of critical errors,,1,Transfer,,,,,,,No,Reduced
+273,Wrisberg and Wulf,1997,1,Adult,Novice,Stable-constant,90,1,67,Yes,No,No,No,,RMSE,RMSE,Yes,,,1,Transfer,20,20,,,,,Yes,Reduced
+421,"Wu, Young, Schandler, Meir, Judy, Perez & Cohen",2011,1,Adult,Novice,Stable-variable,192,1,60,Yes,No,Yes,No,,Other-percise,ACE,Yes,,,1,Transfer,41,41,,,,,No,Undetermined
+496,"Wulf, Schmidt & Deubel",1993,2,Adult,Novice,Stable-variable,90,1,63,Yes,No,Yes,No,,RMSE,RMSE,Yes,,,1,Transfer,,,420,,,429,No,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Transfer,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigNo,8,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,SigYes,1,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,ODR,0.125,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Fav100,2,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,FavRed,2,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,Undet,11,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
