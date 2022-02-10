@@ -1,0 +1,1035 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  english,
+  man, donotrepeattitle,mask,floatsintext]{apa7}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Meta-analysis of the reduced relative feedback frequency effect on motor learning and performance},
+  pdflang={en-EN},
+  pdfkeywords={Feedback frequency, knowledge of results, knowledge of performance, guidance hypothesis, performance-learning distinction, motor learning, meta-analysis},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% Overwrite redefinition of paragraph and subparagraph by the default LaTeX template
+% See https://github.com/crsh/papaja/issues/292
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries\itshape\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-\z@\relax}%
+  {\normalfont\normalsize\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+\shorttitle{Feedback frequency meta-analysis}
+\keywords{Feedback frequency, knowledge of results, knowledge of performance, guidance hypothesis, performance-learning distinction, motor learning, meta-analysis}
+\usepackage{lineno}
+
+\linenumbers
+\usepackage{csquotes}
+\usepackage{ragged2e}
+\usepackage{pdflscape}
+\pagewiselinenumbers
+\raggedbottom
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\else
+  \usepackage[main=english]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\title{Meta-analysis of the reduced relative feedback frequency effect on motor learning and performance}
+\author{Brad McKay\textsuperscript{1,2}, Julia Hussien\textsuperscript{1}, Mary-Anne Vinh\textsuperscript{1}, Alexandre Mir-Orefice\textsuperscript{1}, Hugh Brooks\textsuperscript{1}, \& Diane M. Ste-Marie\textsuperscript{1}}
+\date{}
+
+
+\authornote{
+
+\vspace{-3em}
+
+\addORCIDlink{Brad McKay}{0000-0002-7408-2323} \newline
+\indent\addORCIDlink{Julia Hussien}{0000-0001-7434-228X}\\
+\addORCIDlink{Mary-Anne Vinh}{0000-0002-1769-6695}\\
+\addORCIDlink{Alexandre Mir-Orefice}{0000-0003-1105-8462}\\
+\addORCIDlink{Hugh Brooks}{0000-0002-9398-1199}\\
+\addORCIDlink{Diane M. Ste-Marie}{0000-0002-4574-9539}
+
+Correspondence concerning this article should be addressed to Brad McKay, 1280 Main Street West, Ivor Wynne Centre Room AB-131 A1, McMaster University, Hamilton ON Canada, L8S 4K1. E-mail: \href{mailto:bradmckay8@gmail.com}{\nolinkurl{bradmckay8@gmail.com}}
+
+}
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} School of Human Kinetics, University of Ottawa\\\textsuperscript{2} Department of Kinesiology, McMaster University}
+
+\abstract{
+A fundamental motor learning principle conveyed in textbooks is that augmented terminal feedback frequency differentially affects motor learning and performance. The guidance hypothesis predicts that relative to a reduced frequency of feedback, providing learners with feedback following every practice trial enhances practice performance but degrades subsequent motor learning. This change in effectiveness for each relative feedback frequency is called a reversal effect, and because it is thought that practice variables can have distinct impacts on learning and performance, delayed retention tests are considered the gold standard in motor learning research. The objectives of this meta-analysis were to a) synthesize the available evidence regarding feedback frequency, performance, and motor learning to test whether there are significant changes in effectiveness from acquisition and immediate retention to delayed retention, b) evaluate potential moderators of these effects, and c) investigate the potential influence of publication bias on this literature. We screened 1662 articles found in PubMed and PsycINFO databases as well as with reference tracing and a targeted author search. A final sample of 61 eligible papers were included in the primary analysis (\emph{k} = 75, \emph{N} = 2228). Results revealed substantial heterogeneity but no significant moderators, high levels of uncertainty, and no significant effect of reduced feedback frequency at any time point. Further, multilevel analyses revealed no evidence of a significant change in effect from acquisition or immediate retention to delayed retention. Z-curve analysis suggested the included studies were severely underpowered. These results suggest that robust evidence regarding feedback frequency and motor learning is lacking.
+}
+
+
+
+\begin{document}
+\maketitle
+
+\textbf{Highlights}
+
+\begin{itemize}
+\tightlist
+\item
+  The available evidence does not indicate a significant effect of reduced relative feedback frequency on motor learning or performance.
+\item
+  The effect of reduced relative feedback frequency does not appear to change significantly from acquisition to retention.
+\item
+  There is evidence of substantial heterogeneity in the literature although the source of the heterogeneity remains unaccounted for.
+\item
+  The studies reviewed in this meta-analysis appear to be severely underpowered.
+\item
+  The guidance hypothesis is not supported by the extant research.
+\end{itemize}
+
+\newpage
+
+In their seminal review, Bilodeau and Bilodeau (1961) proclaimed feedback as the most impactful variable contributing to motor learning and performance, stating ``\ldots{} there is no improvement without {[}feedback{]}, progressive improvement with it, and deterioration after its withdrawal'' (p.250). Salmoni, Schmidt, and Walter (1984) agreed that feedback is a critical determinant of motor performance, but suggested ironic effects on motor learning. In what is now widely regarded as the ``Guidance Hypothesis,'' Salmoni et al suggested that feedback functions much like physical guidance, influencing motor performance toward the goal outcome but undermining the development of intrinsic error detection and correction processes that ostensibly underlie sustained motor learning. A key prediction of the guidance hypothesis is that providing feedback following each trial enhances performance during acquisition but degrades performance on a no-feedback retention test, relative to providing feedback at a reduced relative frequency. Although the primary tenets of the guidance hypothesis have been widely accepted in some form by motor learning researchers (e.g., Lee \& Carnahan, 2021; Magill \& Anderson, 2012; Ong \& Hodges, 2020; Sigrist, Rauter, Riener, \& Wolf, 2013), experimental evidence has been mixed, fueling debate with respect to the optimal scheduling of feedback for motor learning (e.g., Wulf \& Lewthwaite, 2016; Wulf \& Shea, 2004).
+
+While feedback is a term that can capture a wide range of information sources, the guidance hypothesis focused on a specific type of feedback: augmented, terminal feedback about the success of the trial with respect to the goal (Salmoni, Schmidt, \& Walter, 1984). Feedback can broadly be divided into two types: intrinsic and extrinsic (Schmidt, Lee, Winstein, Wulf, \& Zelaznik, 2018). Intrinsic feedback arrives to the learner through their own senses. For example, an archer receives visual intrinsic feedback of the outcome of her shot through her own vision of the arrow and the target. Conversely, extrinsic feedback is provided to the learner by an external source. Since extrinsic feedback is in addition to one's intrinsic feedback, it is often called augmented feedback. As an example, a baseball pitcher could receive augmented feedback about their fastball velocity from a radar gun. Augmented feedback can be further divided based on the timing of its presentation; where concurrent feedback is provided during the performance and terminal feedback is provided following the performance. When a video game shows the player the positioning of their joysticks in real time, the game is providing concurrent feedback. Conversely, when a cricket coach tells her player that their swing was too late, they are providing terminal feedback. Like the guidance hypothesis, the present research is restricted in scope to augmented, terminal feedback.
+
+One of the most influential aspects of the guidance hypothesis is the prediction of a ``reversal effect'': The relative effectiveness of a 100\% feedback frequency in comparison to a reduced frequency is predicted to reverse from acquisition to no-feedback transfer tests (called retention tests hereafter). Putative reversal effects are commonly referenced as a central reason to explain why modern motor learning researchers focus on retention tests, rather than performance curves (Kantak \& Winstein, 2012; Lee \& Carnahan, 2021; Salmoni, Schmidt, \& Walter, 1984; Schmidt, Lee, Winstein, Wulf, \& Zelaznik, 2018). Further, delaying retention tests for at least 24-hours to allow for a night of sleep between acquisition and testing have been advocated as the minimum standard for assessing relatively permanent changes in motor skill (Kantak \& Winstein, 2012). In their influential review, Kantak and Winstein investigated experiments that manipulated practice or feedback conditions during acquisition and included both an immediate and delayed retention or transfer test. Of the included experiments, studies that manipulated feedback were the most common. Based on a vote-counting comparison of statistical significance at each time point, Kantak and Winstein concluded that immediate and delayed retention tests often produced conflicting results. A weakness of the vote-counting method in this context is that the difference between significant and non-significant is not necessarily significant itself (Gelman \& Stern, 2006). A more rigorous approach to determining if the effect of a practice method changes from immediate to delayed retention is multilevel/multivariate meta-analysis (Van den Noortgate, López-López, Marín-Martínez, \& Sánchez-Meca, 2015).
+
+The reversal predicted by the guidance hypothesis, and widely accepted in at least some contexts, is from acquisition performance when feedback is present to retention performance when it is not (Lee \& Carnahan, 2021; Magill \& Anderson, 2012; Salmoni, Schmidt, \& Walter, 1984; Sigrist, Rauter, Riener, \& Wolf, 2013). In a meta-analysis of studies conducted as of 2001, Marschall, Bund, and Wiemeyer (2007) reported a significant benefit for a 100\% feedback frequency during acquisition and a significant benefit to a reduced feedback frequency at delayed retention. While these results are suggestive, the authors highlighted that the primary findings were not robust. Based on a Fail Safe \emph{N} analysis, only two or three zero-effect results missing from the sample would have made their findings non-significant. Studies may have been missing from the sample due to preferential publication of positive, statistically significant results, a practice that can distort the scientific literature. Such a distortion is often called publication bias (Dickersin, Chan, Chalmersx, Sacks, \& Smith Jr, 1987). This is notable as the authors suggested publication bias may have impacted their results, highlighting that statistics for non-significant results were not reported nor discussed in their sample. Critically, the authors included multiple outcomes and multiple reduced frequency group comparisons in their analysis without accounting for the dependency among the effect sizes; this practice has the effect of incorrectly reducing variance estimates and inflating the Type 1 error rate (Borenstein, Hedges, Higgins, \& Rothstein, 2021; Scammacca, Roberts, \& Stuebing, 2014). Considering these issues, the evidence in favor of both 100\% feedback for acquisition and reduced frequencies for delayed retention seems tenuous. Further, Marschall, Bund, and Wiemeyer (2007) did not statistically compare acquisition, immediate retention, and delayed retention time points, as would be required for substantive conclusions regarding reversal effects.
+
+Save for the meta-analysis reported by Marschall, Bund, and Wiemeyer (2007), the feedback frequency literature has only been synthesized qualitatively. Nevertheless, there is an apparent consensus that providing feedback 100\% of the time during acquisition a) guides learners to the correct response, b) can create a dependency on feedback, and c) blocks intrinsic error detection and correction processes (Lee \& Carnahan, 2021; Magill \& Anderson, 2012; Schmidt, Lee, Winstein, Wulf, \& Zelaznik, 2018; Sigrist, Rauter, Riener, \& Wolf, 2013; Winstein, 1991; Wulf \& Shea, 2004). The present meta-analysis provides a current, rigorous, and quantitative examination of the reduced feedback frequency literature, addressing the effectiveness of reduced frequencies of feedback for acquisition, immediate retention, and delayed retention performance. Further, potential changes in effectiveness from acquisition to delayed retention and from immediate retention to delayed retention were evaluated using multilevel meta-analytic methods.
+
+The primary objectives of this research were as follows: 1) estimate the effect of providing a reduced frequency of terminal feedback on acquisition, immediate retention, and delayed retention of motor skills in a healthy population, 2) investigate whether the effect of reducing terminal feedback frequency changes from immediate to delayed retention, 3) investigate whether the effect changes from acquisition to delayed retention, and 4) investigate the influence of publication bias on the primary meta-analysis. To this end, we restricted our primary analyses to experiments that manipulated feedback frequency directly and included a 100\% frequency comparison group. Experiments that manipulated frequency via trial delay, summary, or statistical methods (i.e., average) were not included. Experiments that manipulated frequency in performance or participant contingent ways, such as bandwidth or self-controlled scheduling, were also excluded, although studies that included a bandwidth group and a 100\% frequency group were collected to test whether bandwidth scheduling has advantages over fixed scheduling schemes. We limited the scope of the primary analyses to experiments that directly manipulated feedback frequency in an effort to limit heterogeneity in true effects.
+
+In line with our primary objectives, we sought to test the following primary hypotheses (quoting directly from our preregistration, \url{https://osf.io/hgba7/?view_only=9e6816867b8c4d6c8cd6ebb7929097d5}):
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Based on the guidance hypothesis (Salmoni, Schmidt, \& Walter, 1984): A reduced frequency of feedback during acquisition will result in superior performance on a delayed 24-hour retention test.
+\item
+  Based on the guidance hypothesis: A reduced frequency of feedback during acquisition will result in superior performance on an immediate, no feedback retention test.
+\item
+  Based on the guidance hypothesis: A 100\% frequency of feedback will result in superior performance during acquisition.
+\item
+  Based on the guidance hypothesis: The effect of feedback frequency will change from acquisition to delayed retention, such that 100\% feedback is more effective for acquisition performance but less effective for delayed retention performance
+\item
+  Based on the Kantak and Winstein (2012) motor memory paradigm: The effect of feedback frequency will change from immediate retention to delayed retention, such that the benefit of reduced feedback frequency will increase from immediate to delayed retention.
+\item
+  Based on our assessment of the motor learning literature: There will be evidence of significant selection effects around \(p = .025\) (one-tailed), such that studies reporting statistically significant results will be overrepresented in the sample.
+\end{enumerate}
+\end{quote}
+
+We restricted our focus on feedback frequency manipulations only to limit heterogeneity of results as much as possible. Nevertheless, feedback frequency experiments have been conducted with various samples and with a multitude of tasks, feedback frequencies, practice amounts, and types of feedback content. Therefore, we anticipated some heterogeneity in the results and planned to test a variety of potential moderators to account for this heterogeneity. Thus, our secondary objectives were to test the following potential moderators: age group (children, adult, older adult), skill level (novice, experienced, expert), task classification (based on Gentile's 2 X 2 framework), number of acquisition trials, number of acquisition days, frequency of terminal feedback, publication status (published, unpublished thesis), bandwidth provisioning (yes, no), faded feedback schedule (yes, no).
+
+In line with our secondary objectives, we tested the following secondary hypotheses (again quoting directly from our preregistration, \url{https://osf.io/hgba7/?view_only=9e6816867b8c4d6c8cd6ebb7929097d5}):
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Based on the Challenge-Point Framework (Guadagnoli \& Lee, 2004): Children and older adults will perform more effectively on delayed retention tests after having practiced with 100\% feedback during acquisition, while younger adults will perform more effectively after having received a reduced frequency of feedback.
+\item
+  Based on research comparing bandwidth feedback protocols to yoked groups: Providing feedback according to a bandwidth will have a larger benefit for delayed retention performance than reduced feedback frequency.
+\item
+  Based on the guidance hypothesis: A faded schedule of feedback during acquisition will be more effective than a static reduced schedule of feedback for delayed retention performance.
+\end{enumerate}
+\end{quote}
+
+In addition to testing our primary and secondary hypotheses, we also considered the possibility we would fail to observe effects large enough to be interesting. We defined our smallest effect size of interest as \(g = .10\).\footnote{We chose an effect of .10 as the smallest effect we would be interested in because it is half the size of the traditional benchmark for a small effect size (Cohen, 1988). Future efforts to define a smallest effect of interest should be more principled and theory-driven.}
+
+\hypertarget{method}{%
+\section{Method}\label{method}}
+
+The Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines were adhered to while preparing this meta-analysis and the completed checklist can be found in the supplemental data (Page et al., 2021). Each step of the search, selection, data collection, and bias assessment process was completed by pairs of researchers working independently, unless otherwise specified (XX + XX, XX + XX, XX + XX). In case of conflicts, the senior researcher from another pair (either XX or XX) independently resolved the conflict.
+
+\hypertarget{eligibility-criteria}{%
+\subsection{Eligibility Criteria}\label{eligibility-criteria}}
+
+\hypertarget{population}{%
+\subsubsection{Population}\label{population}}
+
+Experiments were eligible for inclusion if the participants were sampled from a healthy population of adults or children. We excluded studies that included clinical populations as results may not generalize.
+
+\hypertarget{intervention}{%
+\subsubsection{Intervention}\label{intervention}}
+
+We included experiments that randomly assigned participants to a 100\% terminal augmented feedback group and a set reduced frequency of terminal augmented feedback group.
+
+\hypertarget{outcomes}{%
+\subsubsection{Outcomes}\label{outcomes}}
+
+To be included, experiments needed to include an objective measure of motor skill performance collected as an immediate and/or delayed retention test. The retention tests followed the acquisition phase after an interval of time and involved the same task parameters as acquisition trials, but no augmented feedback was provided. Experiments that included only a transfer test (performance of a task that required different task parameters for success) were not included.
+
+\hypertarget{additional-restrictions-on-eligibility}{%
+\subsubsection{Additional Restrictions on Eligibility}\label{additional-restrictions-on-eligibility}}
+
+We required studies to be published in peer reviewed journals or be an accepted masters or doctoral thesis to ensure the results were complete and had passed an initial quality screening. Further, we required the studies be available in English due to limited language knowledge in other languages by members of the research team.
+
+\hypertarget{information-sources-search-strategy-and-selection-process}{%
+\subsection{Information Sources, Search Strategy, and Selection Process}\label{information-sources-search-strategy-and-selection-process}}
+
+On August 5th, 2020 XX and XX searched PubMed and PsycInfo databases for ``feedback'' AND ``motor learning'' and returned the same number of hits. XX imported the results into Covidence, a systematic review software (Covidence, n.d.). Initial results from the database search were screened based on title and abstract in Covidence. The full-text of articles that were not excluded based on title and abstract were then screened. When full-text screening revealed an article was not eligible for inclusion, the reason for exclusion was recorded in Covidence. Subsequently, the reference sections of identified eligible articles were reviewed and any potentially eligible titles were searched in Google Scholar, a process known as backward tracing. Next, forward tracing was conducted using the ``cited by'' feature on Google Scholar to search all papers that had cited articles identified as eligible. We repeated this process a second time with any eligible papers that were found via forward or backward reference tracing. Finally, a targeted author search was performed in Google Scholar for any author with at least two papers identified as eligible for inclusion. The final paper uploaded to Covidence occurred on September 1st, 2020, representing the end date of our search process.
+
+\hypertarget{data-collection-process}{%
+\subsubsection{Data Collection Process}\label{data-collection-process}}
+
+Data were collected using a data collection form we developed through early piloting. The collection form can be found at the OSF database. The form was created in Excel and used restricted data entry to ensure consistent coding terms. The data collection form was updated during data collection when an unanticipated error measure was encountered (see Deviations from Pre-Registration below for exhaustive review of deviations from pre-planned procedures).
+
+Outcome data were extracted according to a prespecified hierarchy. When available, means and standard deviations were selected for each outcome of interest at each time point of interest. If standard deviations were unavailable standard errors were selected. When means were unavailable, \emph{F} statistics (or \emph{t} statistics) were extracted. When an analysis of covariance was the primary analysis reported, the \emph{F} statistic and the correlation between the covariate (pre-test in all instances) and the outcome measure was extracted.
+
+\textcolor{red}{Initial agreement between research pairs was 87.9\%} After all conflicts between researcher pairs had been resolved, XX combined the data from the three pairs of researchers into a comma separated master data file. Version control was ensured by saving changes to the master file as a new, date-specific file. Frequently, articles did not provide sufficient detail to code for moderators or extract data required for calculation of effect size estimates. When data were missing, AMO, HB, and MV contacted corresponding authors and requested access to the raw data or the specific data that were unavailable. If no response was received, a follow-up email was sent approximately one month after the first attempt. If the authors were able to provide the requested data, XX added it to the master data file in an updated version. \textcolor{red}{A total of 16 articles provided data via email.}
+
+If outcome data were still missing after outreach to authors, figures that included error bars were digitized using WebPlotDigitizer 4.4 (Rohatgi, 2020). The digitization process produced values that were precise to the pixel, therefore absolute agreement between independent coders was rare. Typically, results between coders were similar and when large conflicts were identified those results were re-digitized. Each value was averaged across coders and XX added the mean result to an updated version of the master data file. \textcolor{red}{Effect sizes from nine studies were extracted via plot digitization.} Studies with outcome data that could not be extracted by reading the article, emailing the authors, or digitizing the figures were omitted from further analysis.
+
+\hypertarget{data-items}{%
+\subsubsection{Data Items}\label{data-items}}
+
+\hypertarget{outcomes-collected}{%
+\paragraph{Outcomes Collected}\label{outcomes-collected}}
+
+We sought objective measures of motor skill performance for inclusion in the meta-analysis. Such measures included error scores, such as absolute error and variable error, as well as outcome measures such as movement time and movement form. We expected many studies would report multiple outcome measures at multiple time-points. For example, an individual study might report results for absolute error, variable error, and movement form, each at acquisition, immediate retention, and delayed retention. For our primary analyses, we selected the outcome measure that corresponded to the information provided as feedback during acquisition. For example, if participants received feedback about their absolute timing error during acquisition, then absolute timing error was the primary outcome measure of interest. We focused on acquisition, immediate retention, and delayed retention time points for our primary analyses, although if delayed transfer tests were reported we extracted those data as well. If feedback did not map directly onto an outcome measure, then we followed a preregistered priority list to select the most relevant outcome available, ordered as: (1) absolute error, (2) root mean square error, (3) absolute constant error, (4) total error, (5) absolute timing error, (6) relative timing error, (7) variable error, (8), movement time, (9) movement form -- expert raters, and (10) otherwise unspecified objective performance measure reported first in research report.
+
+In addition to the primary dependent measure of interest, up to two additional outcome measures were collected if reported. When more than two additional outcomes were reported, we used the priority list to select the two most relevant outcomes. Secondary outcomes were analyzed as part of a series of sensitivity analyses to evaluate the impact of our dependent measure selection on the conclusions drawn from the primary analyses.
+
+If feedback frequency was an independent variable in a factorial design, we coded the main effect of feedback frequency if it did not interact with a second independent variable. If there was a statistically significant interaction at any time point, then we extracted the simple effects of feedback frequency at all time points for a given study. We excluded simple effects for levels of a second independent variable that moderated the effect of feedback frequency by including an additional, atypical element to the practice condition. For example, if an experiment crossed feedback frequency with real and sham transcranial direct current stimulation, we selected only the simple effects from the sham condition. When the same experiment included multiple reduced frequency of feedback groups, we collected data for all groups and selected the lowest non-zero frequency for primary analyses. If an experiment included multiple groups with the same frequency of feedback, we selected the group that followed a fixed, uniformly distributed schedule of feedback if one was present.
+
+\hypertarget{moderators-collected}{%
+\paragraph{Moderators Collected}\label{moderators-collected}}
+
+Information pertaining to moderator variables was also collected from each article (or thesis). We collected data on the following: (1) article features (authors, year, publication status, and experiment number), (2) experiment features (number of trials, days of acquisition, immediate retention delay interval in minutes, delayed retention interval in days), (3) task features; coding was based on Gentile's (Gentile, 2000) taxonomy of tasks, resulting in four combinations that arose from the regulatory context (stable, in-motion) and inter-trial variability (constant, variable), (4) participant features (age: child, adult, older adult; and skill level: novice, experienced, expert), (5) feedback features (frequency, content, whether provided with a faded schedule, and whether provided with a bandwidth mechanism) and (6) the outcome measure as outlined above.
+
+\hypertarget{risk-of-bias-assessment-process}{%
+\subsection{Risk of Bias Assessment Process}\label{risk-of-bias-assessment-process}}
+
+Risk of bias for each study was evaluated using the Cochrane Risk of Bias 1.0 checklist (Higgins et al., 2011). Judgments were made about seven dimensions of potential risk of bias: Sequence generation, allocation concealment, blinding of participants and personnel, blinding of outcome assessment, incomplete outcome data, selective reporting of results, and other sources of bias. Each dimension received one of three judgments: Low risk, unclear, or high risk. Selective outcome reporting is difficult to evaluate by its very nature, so we defaulted to the methodological details provided by the authors and the clarity of their reporting. Typically, risk of selective outcome reporting was deemed as unclear unless the authors were explicit about collecting data that were unreported, or explicit that all data were reported. The ``other sources of bias'' dimension captured concerns that were shared among the authors of this review, such as if the original data analysis and/or interpretation in a paper was problematic. Since only studies included in the analysis were graded, the incomplete outcome reporting dimension was evaluated only with respect to whether outliers and/or attrition were mentioned in the paper. We also considered participants who were naïve to the purpose of the study and unaware of the other conditions involved as ``blinded,'' since motor learning studies cannot prevent participants from being aware of the nature of the intervention they are receiving. In order for personnel to be considered blinded, we required that feedback and instructions be provided by a computer along with no additional risks of researcher influence. Each dimension of the risk of bias assessment was tested as potential moderator of the overall effect of reduced feedback frequency across time points in a series of exploratory analyses.
+
+\hypertarget{effect-measures}{%
+\subsection{Effect Measures}\label{effect-measures}}
+
+We calculated the standardized mean difference between 100\% frequency and reduced frequency feedback groups for analysis. Specifically, we calculated Hedges' \emph{g} estimates and their variance using the \texttt{compute.es} package in \texttt{R} (Del Re, 2013).
+
+\hypertarget{synthesis-methods}{%
+\subsection{Synthesis Methods}\label{synthesis-methods}}
+
+\hypertarget{preparing-data-for-synthesis}{%
+\subsubsection{Preparing Data for Synthesis}\label{preparing-data-for-synthesis}}
+
+If multiple groups could not be differentiated with respect to frequency, distribution, or pre-determinacy of schedule, those groups were combined using the Cochrane formula for combining independent groups (Higgins et al., 2019):
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \[ Mean = \frac{N_1M_1 + N_2M_2}{N_1 + N_2} \]
+\item
+  \[ SD = \sqrt{\frac{(N_1 - 1)SD_1^2 + (N_2 - 1)SD_2^2 + \frac{N_1N_2}{N_1 + N_2}(M_1^2 + M_2^2 - 2M_1M_2)}{N_1 + N_2 - 1}} \]
+\end{enumerate}
+
+We converted standard errors to standard deviations before combining groups or calculating effect sizes by multiplying the standard error by the square root of the sample size:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \[SD  = SE*\sqrt{n}\]
+\end{enumerate}
+
+When data were reported as group means and standard deviations for multiple acquisition or retention blocks, the raw data were required to combine those blocks due to the dependent nature of the data. When the raw data were not available for the acquisition phase, that time point was omitted from further analysis. If immediate retention, delayed retention, or transfer test data included multiple blocks that were not combined, means and standard deviations from the first block were selected for analysis.
+
+\hypertarget{influential-case-analysis}{%
+\subsubsection{Influential Case Analysis}\label{influential-case-analysis}}
+
+In order to evaluate whether specific data points were excessively influential at a given time point, the following influence statistics were calculated using the \texttt{metafor} package in \texttt{R} (Viechtbauer, 2010): externally standardized residuals, Cook's distances, and covariance ratios. If any effect had been identified as extremely influential by the default cut-offs for these tests in `metafor,' it would have been removed from the primary analyses. However, no influential cases were identified with this procedure.
+
+To evaluate influential cases in the multilevel analyses, Cook's distances were calculated and values greater than .50 were considered influential. One influential case was detected, and analyses were conducted with and without the case included. None of the results changed substantively based on the inclusion or exclusion of the influential case.
+
+\hypertarget{meta-analysis-models}{%
+\subsubsection{Meta-analysis Models}\label{meta-analysis-models}}
+
+The primary research questions in this study were addressed by fitting multilevel models to the data with random effects for experiment and time points (acquisition, immediate retention, and delayed retention) nested within experiments. The same participants contributed data to each time point in each experiment, creating dependency between effect size estimates. There are three primary approaches to accounting for dependence: 1) ignoring dependence and treating time points as independent, which is inappropriate and produces deflated estimates of standard errors, 2) avoiding dependence by fitting separate models for each time point, which a) does not allow for a test of the difference between time points, and b) is inefficient because each analysis uses only part of the available data, and 3) modeling dependence, which makes use of all available data, allows for a test of the difference between time points, and is more powerful than fitting separate univariate models (Becker, 2000; López-López, Van den Noortgate, Tanner-Smith, Wilson, \& Lipsey, 2017; Van den Noortgate, López-López, Marín-Martínez, \& Sánchez-Meca, 2013, 2015). The mulitlevel approach to modelling dependent effect sizes was chosen in this study because it does not require ``known'' or estimated correlations between time points, which were not reported in any of the included experiments. Extensive simulation studies conducted by Van den Noortgate and colleagues (López-López, Van den Noortgate, Tanner-Smith, Wilson, \& Lipsey, 2017; Moeyaert et al., 2017; Van den Noortgate, López-López, Marín-Martínez, \& Sánchez-Meca, 2013, 2015) have demonstrated that three-level multilevel models account for dependency between time points and provide unbiased estimates of mean effect, standard errors, and confidence intervals.\footnote{\textcolor{red}{We also conducted simulations of our own that were consistent with the number of studies, sample sizes of included studies, and number of included time points in the present study. Code for this simulation is available in the supplementary materials and can be adapted to accommodate a variety of scenarios.}}
+
+Our approach to the analysis involved four steps. First, univariate random effects models were fit for acquisition, immediate retention, and delayed retention time points. These univariate models were used to fit three-point selection models with a one-tailed \emph{p}-value cutoff of .025 to evaluate and correct for the impact of selection bias around statistical significance (Vevea \& Woods, 2005). The three-point weight function model estimates the probability that non-significant studies survived censorship to appear in the meta-analysis based on the random effects estimate of the average effect. If non-significant results are less likely to survive censorship than significant results, an adjusted average effect estimate is produced. Second, the average effect of reduced feedback frequency at acquisition, immediate retention, and delayed retention was estimated by fitting a multilevel model with time point nested in experiment. Third, the change in effect from acquisition to delayed retention was tested by comparing only those two coefficients in the model. Fourth, the change in effect from immediate retention to delayed retention was evaluated by testing only those two coefficients in the model. Heterogeneity was evaluated based on restricted maximum likelihood (REML) calculation of \(\small\tau^2\) and 95\% prediction (credibility) intervals.
+
+\hypertarget{moderator-analyses}{%
+\subsubsection{Moderator Analyses}\label{moderator-analyses}}
+
+Categorical moderators were included one at a time in multilevel mixed-effects models that allowed the moderator to interact with time point. Similarly, meta-regressions with each continuous moderator were included separately. Cochrane's \emph{Q-M} test was used to evaluate whether moderators accounted for a significant amount of residual heterogeneity.
+
+\hypertarget{sensitivty-analyses}{%
+\subsubsection{Sensitivty Analyses}\label{sensitivty-analyses}}
+
+Several sensitivity analyses were conducted to evaluate the extent to which our findings depended on the specific analysis decisions we chose. These sensitivity analyses spanned three main areas: model selection, multivariate dependencies, and selection bias assessment (further discussed in the section below). To evaluate the impact of selecting only a single primary outcome measure rather than including all outcome measures reported, we fit a multilevel model with measure nested within time nested within study. We proceeded to evaluate each moderator with this alternative model specification. The results of these analyses did not lead to different conclusions from the primary analyses (see Supplemental data).
+
+In order to assess the robustness of our multilevel models, we refit our primary models using cluster-robust inference methods as well as approximating the covariance matrix by using the one intra-class correlation value available to us from the sample, as well as variations around that value (McKay \& Ste-Marie, 2020; Pustejovsky \& Tipton, 2020). Although robust variance estimation methods tend to produce similar results to multilevel models, their precision may be improved if the true dependence structure of the data is accurately estimated (Pustejovsky \& Tipton, 2020). The results of these sensitivity analyses were not markedly different from the main analyses reported below (see Supplemental Data).
+
+\hypertarget{selection-bias-assessment}{%
+\subsubsection{Selection Bias Assessment}\label{selection-bias-assessment}}
+
+Our preregistered primary method of assessing and correcting for publication bias was the Vevea-Hedges three-point weight function model with a cutoff at \emph{p} = .025 (one-tailed) fit to each time point. Ropovik, Adamkovic, and Greger (2021) have argued that meta-analyses should include the three-point selection model by default, since selection around statistical significance is common in many fields yet is often ignored. While the three-point selection model is a state-of-the-art technique for addressing publication bias, it only models one specific type of selection. The true data generating process may include a variety of forms of selection and cannot be known (Carter, Schönbrodt, Gervais, \& Hilgard, 2019). Therefore, we evaluated a suite of bias correction methods under a range of plausible circumstances and fit all models with good performance. This method performance check was conducted using the Meta-Showdown Explorer shiny app (\url{https://tellmi.psy.lmu.de/felix/metaExplorer/}?) (Carter, Schönbrodt, Gervais, \& Hilgard, 2019). The largest amount of heterogeneity that could be tested on the app was \(\small\tau = .4\), which is potentially much less than exists in the present meta-analysis. We therefore chose to apply recently developed methods not covered by the Meta-Showdown Explorer that may be more robust in the presence of high heterogeneity. Specifically, we conducted a robust Bayesian meta-analysis (RoBMA). The RoBMA approach eliminates the need to pick one method to correct for selection bias and instead fits several weight-function models consistent with various forms of selection. For example, a four-point selection model with one-tailed cutpoints at \emph{p} = .05 and \emph{p} = .025 models a situation where results are censored based on statistical significance and also the threshold for what some consider a non-significant trend. RoBMA fits six different selection models accounting for different forms of selection. In addition, regression models that fit linear (precision effect test; PET) and quadratic (precision effect estimate with standard errors; PEESE) relationships between effect sizes and standard errors (Stanley, 2017) are also included in the RoBMA model. The PET model assumes that effect sizes in a meta-analysis increase as their standard errors increase, consistent with selective publishing of significant results. The PEESE model assumes that large studies with precise estimates are published regardless of statistical significance, whereas smaller, more imprecise studies require increasingly large effect sizes to survive censorship. While each of these models can effectively model different forms of publication bias and typically produce better estimates than a naïve random effects model, their performance depends on the underlying (unknown) data generating process (Carter, Schönbrodt, Gervais, \& Hilgard, 2019). The RoBMA approach fits each of the publication bias models while assuming an effect is present or absent and heterogeneity is present or absent, plus models that assume no publication bias in each of the four effect/heterogeneity situations, resulting in a total of 36 models fit to the data. Models that assume publication bias are given a prior probability of .5, spread between selection models and PET-PEESE models, and models that assume no publication bias are given a prior of .5. Bayesian model averaging is used to combine the results of the 36 models, weighting each model based on its posterior probability. Therefore, models that provide a better fit to the data are given greater weight in the final estimate, but alternative models are down-weighted rather than discarded. Simulation studies and application to real world data suggest that the RoBMA approach is more effective than any one of its constituent models across a variety of situations, providing estimates that are robust to model misspecification and effect heterogeneity (Bartoš, Maier, Wagenmakers, Doucouliagos, \& Stanley, 2021; Maier, Bartoš, \& Wagenmakers, 2020).
+
+An alternative approach to probing publication bias that is not affected by heterogeneity is \emph{z}-curve (Bartoš \& Schimmack, 2020). \emph{Z}-curve uses only statistically significant findings and estimates the distribution of non-significant values, many of which may be missing from the dataset due to selection. Unlike other methods that can calculate corrected effect estimates, \emph{z}-curve does not attempt to estimate a true average effect. Instead, \emph{z}-curve focuses on the \textcolor{red}{average} power of the studies that produced significant results while allowing the true underlying effects to be heterogeneous. If the proportion of studies in a meta-analysis that contain significant results is significantly greater than the estimated \textcolor{red}{average} power of those studies, selective reporting based on statistical significance can be inferred. \emph{Z}-curve can be used to estimate two types of power: a) conditional power: the probability that replication attempts of included (significant) studies will succeed, termed the expected replication rate (ERR), and b) unconditional power: the probability that any given study that has been conducted (published or not) would produce a significant result, termed the expected discovery rate (EDR). Estimated power is useful not only for assessing publication bias within the feedback literature, but also for estimating the probability that future feedback experiments will replicate earlier findings. The delayed retention time point was considered the primary target for a significant finding in motor learning research and previous research has found substantial selection at that time point (McKay, Yantha, Hussien, Carter, \& Ste-Marie, 2021). As such, we focused both the RoBMA and \emph{z}-curve analyses on delayed retention results.
+
+\hypertarget{certainty-assessment}{%
+\subsubsection{Certainty Assessment}\label{certainty-assessment}}
+
+Our focus was on the confidence and especially prediction intervals of the estimates produced by our models. Prediction intervals tell us the range of effects we would expect to observe if we randomly sampled an experiment from the same population of experiments that were sampled in the analysis (IntHout, Ioannidis, Rovers, \& Goeman, 2016).
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{study-selection}{%
+\subsection{Study Selection}\label{study-selection}}
+
+We found 1,030 records through database searching after removing duplicates. We subsequently retrieved an additional 632 articles via backward and forward citation searches as well as a targeted author search. A total of 1662 articles were screened, resulting in full-text reviews of 147 articles. A total of 61 articles were selected for analysis. It was possible to calculate effect sizes for experiments from 32 of these articles (see Supplemental Data for summary of missing outcomes). Reasons for excluding articles were: did not include targeted feedback frequency manipulation (49), clinical population only (3), not a randomized experiment (4), could not retrieve full text (10), full text not available in English (1), not studying a motor skill (6), no retention test (7), thesis was later published (4), \textcolor{red}{poor quality and questionable validity and/or published in a potentially predatory journal} (Beall, 2012; Memon, 2018) (2). (see Figure \ref{fig:fig1}).
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{../../figures/figure1} 
+
+}
+
+\caption{Flow Diagram of Study Selection.}\label{fig:fig1}
+\end{figure}
+
+\hypertarget{study-characteristics}{%
+\subsection{Study Characteristics}\label{study-characteristics}}
+
+Study characteristics and effect sizes for all studies included in the meta-analysis are presented in Table \ref{tab:table1}.
+
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{landscape}
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item \textit{Note.} 
+\item n100 = sample size for 100\% feedback group; n2 = sample size for reduced frequency group; Var = variance of Hedges' g estimate. Only data from primary measures are presented.
+\end{TableNotes}
+\begin{longtable}[l]{lrllllrrrr}
+\caption{\label{tab:table1}Characteristics and Effect Sizes of Included Studies.}\\
+\toprule
+Authors & Year & Age & Skill & Task & Time & n100 & n2 & Var & g\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:table1}Characteristics and Effect Sizes of Included Studies. \textit{(continued)}}\\
+\toprule
+Authors & Year & Age & Skill & Task & Time & n100 & n2 & Var & g\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
+Agethen \& Krause & 2016 & Adult & Novice & Stable-constant & Acquisition & 12 & 12 & 0.19 & -1.27\\
+\addlinespace
+Agethen \& Krause & 2016 & Adult & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & -0.08\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.28\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.20 & 0.88\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & -0.42\\
+\addlinespace
+Albequerque et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.29\\
+\addlinespace
+Aoyagi et al. & 2019 & Adult & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.14\\
+\addlinespace
+Aoyagi et al. & 2019 & Adult & Novice & Stable-constant & DelayRet & 15 & 15 & 0.13 & 0.37\\
+\addlinespace
+Badets \& Blandin & 2010 & Adult & Novice & Stable-variable & ImmRet & 12 & 12 & 0.18 & -1.01\\
+\addlinespace
+Badets \& Blandin & 2010 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.17 & -0.69\\
+\addlinespace
+Badets \& Blandin & 2012 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.16 & 0.59\\
+\addlinespace
+Badets \& Blandin & 2012 & Adult & Novice & Stable-variable & DelayRet & 12 & 12 & 0.17 & 0.69\\
+\addlinespace
+Blandin, Toussaint \& Shea & 2008 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.58\\
+\addlinespace
+Bruechert et al. & 2003 & Adult & Novice & Stable-constant & Acquisition & 12 & 12 & 0.17 & 0.90\\
+\addlinespace
+Bruechert et al. & 2003 & Adult & Novice & Stable-constant & DelayRet & 12 & 12 & 0.19 & 1.31\\
+\addlinespace
+Burtner et al. & 2014 & Child & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.60\\
+\addlinespace
+Burtner et al. & 2014 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.22 & -1.14\\
+\addlinespace
+da Silva, Pereira-Monfredini \& Teixeira & 2017 & Child & Novice & Stable-constant & ImmRet & 10 & 10 & 0.24 & -1.51\\
+\addlinespace
+da Silva, Pereira-Monfredini \& Teixeira & 2017 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.24 & 1.57\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & Acquisition & 15 & 15 & 0.17 & 1.54\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & Acquisition & 15 & 15 & 0.17 & 1.59\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.11\\
+\addlinespace
+de Oliveira et al. & 2009 & Child & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.60\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & Acquisition & 14 & 14 & 0.14 & -0.61\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & ImmRet & 14 & 14 & 0.13 & 0.10\\
+\addlinespace
+Drews et al. & 2020 & Adult & Novice & In motion-constant & DelayRet & 14 & 14 & 0.22 & -2.14\\
+\addlinespace
+Goh, Kantak \& Sullivan & 2012 & Child & Novice & Stable-constant & DelayRet & 10 & 9 & 0.19 & -0.17\\
+\addlinespace
+Goh, Kantak \& Sullivan & 2012 & Adult & Novice & Stable-constant & DelayRet & 10 & 9 & 0.19 & 0.12\\
+\addlinespace
+Guadagnoli \& Kohl & 2001 & Adult & Novice & Stable-constant & DelayRet & 16 & 16 & 0.13 & 0.97\\
+\addlinespace
+Guadagnoli et al. & 2002 & Older & Novice & Stable-constant & ImmRet & 10 & 10 & 0.20 & 0.73\\
+\addlinespace
+Guay et al. & 1999 & Adult & Novice & Stable-constant & ImmRet & 10 & 10 & 0.19 & -0.66\\
+\addlinespace
+Guay et al. & 1999 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.18 & 0.11\\
+\addlinespace
+Keller et al. & 2014 & Adult & Novice & Stable-constant & DelayRet & 11 & 12 & 0.16 & -0.06\\
+\addlinespace
+Kohl \& Guadagnoli & 1996 & Adult & Novice & Stable-constant & DelayRet & 12 & 24 & 0.12 & 0.05\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & Acquisition & 24 & 24 & 0.08 & -0.21\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & ImmRet & 24 & 24 & 0.08 & -0.37\\
+\addlinespace
+Lotfi et al. & 2018 & Adult & Novice & Stable-constant & DelayRet & 24 & 24 & 0.08 & -0.50\\
+\addlinespace
+McCullagh \& Little & 1990 & Adult & Novice & Stable-constant & ImmRet & 15 & 15 & 0.13 & 0.32\\
+\addlinespace
+McCullagh \& Little & 1990 & Adult & Novice & Stable-constant & DelayRet & 15 & 15 & 0.13 & 0.07\\
+\addlinespace
+McKay \& Ste-Marie & 2020 & Adult & Novice & Stable-constant & Acquisition & 34 & 35 & 0.05 & 0.17\\
+\addlinespace
+McKay \& Ste-Marie & 2020 & Adult & Novice & Stable-constant & DelayRet & 34 & 35 & 0.05 & -0.28\\
+\addlinespace
+Rangathan \& Newell & 2009 & Adult & Novice & Stable-constant & Acquisition & 6 & 6 & 0.30 & -0.57\\
+\addlinespace
+Rangathan \& Newell & 2009 & Adult & Novice & Stable-constant & ImmRet & 6 & 6 & 0.28 & -0.08\\
+\addlinespace
+Shewokis, Kennedy, \& Marsh & 2000 & Adult & Novice & Stable-constant & Acquisition & 8 & 8 & 0.23 & -0.40\\
+\addlinespace
+Shewokis, Kennedy, \& Marsh & 2000 & Adult & Novice & Stable-constant & DelayRet & 8 & 8 & 0.22 & -0.12\\
+\addlinespace
+Steinhauer \& Grayhack & 2000 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.20 & 0.79\\
+\addlinespace
+Steinhauer \& Grayhack & 2000 & Adult & Novice & Stable-constant & ImmRet & 10 & 10 & 0.19 & 0.52\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Child & Novice & Stable-constant & Acquisition & 10 & 10 & 0.19 & -0.60\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Adult & Novice & Stable-constant & Acquisition & 10 & 10 & 0.18 & 0.16\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Child & Novice & Stable-constant & DelayRet & 10 & 10 & 0.22 & -1.14\\
+\addlinespace
+Sullivan, Kantak \& Burtner & 2008 & Adult & Novice & Stable-constant & DelayRet & 10 & 10 & 0.19 & 0.42\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & Acquisition & 17 & 17 & 0.13 & 1.02\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & ImmRet & 17 & 17 & 0.14 & 1.36\\
+\addlinespace
+Weeks \& Kordus & 1998 & Child & Novice & Stable-constant & DelayRet & 17 & 17 & 0.16 & 1.74\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & ImmRet & 17 & 17 & 0.11 & 0.30\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & DelayRet & 29 & 29 & 0.07 & 0.65\\
+\addlinespace
+Winstein \& Schmidt & 1990 & Adult & Novice & Stable-constant & DelayRet & 23 & 23 & 0.09 & 0.74\\
+\addlinespace
+Wu et al. & 2011 & Adult & Novice & Stable-variable & Acquisition & 41 & 41 & 0.05 & -0.51\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & ImmRet & 12 & 12 & 0.16 & -0.64\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & ImmRet & 12 & 12 & 0.16 & 0.13\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & -0.45\\
+\addlinespace
+Wulf, Chiviacowsky, et al. & 2010 & Child & Novice & Stable-constant & DelayRet & 12 & 12 & 0.16 & 0.46\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & Acquisition & 36 & 36 & 0.05 & 0.29\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & ImmRet & 36 & 36 & 0.06 & 0.37\\
+\addlinespace
+Wulf, Lee, \& Schmidt & 1994 & Adult & Novice & Stable-constant & DelayRet & 36 & 36 & 0.06 & 0.49\\
+\addlinespace
+Wulf, Schmidt \& Deubel & 1993 & Adult & Novice & Stable-variable & Acquisition & 19 & 19 & 0.11 & 0.59\\
+\addlinespace
+Wulf, Schmidt \& Deubel & 1993 & Adult & Novice & Stable-variable & DelayRet & 19 & 19 & 0.10 & 0.33\\
+\addlinespace
+Yamamoto et al. & 2019 & Adult & Novice & In motion-constant & DelayRet & 9 & 7 & 0.24 & -0.59\\
+\addlinespace
+Yamamoto et al. & 2019 & Adult & Experienced & In motion-constant & DelayRet & 7 & 9 & 0.23 & -0.39\\
+\addlinespace
+Zamini et al. & 2015 & Child & Novice & Stable-constant & DelayRet & 7 & 7 & 0.38 & 1.92\\*
+\end{longtable}
+\end{ThreePartTable}
+\end{landscape}
+\endgroup{}
+
+\hypertarget{risk-of-bias}{%
+\subsection{Risk of Bias}\label{risk-of-bias}}
+
+An overall summary of the risk of bias assessment can be seen in Figure \ref{fig:fig2}. Outliers and attrition were rarely mentioned in the articles reviewed, resulting in 88.5\% of studies receiving a high risk of bias rating in the ``Incomplete Outcome Data'' dimension. There was also a lack of clarity in the included studies regarding allocation concealment, the comprehensiveness of their outcome reporting, and measures taken to blind participants and research personnel during data collection. A substantial number of studies included unblinded outcome assessors. Conversely, most studies were explicit about the use of random assignment and tended to lack other reasons for concern. Each dimension was tested as a possible moderator, but none accounted for a significant proportion of the heterogeneity in effect sizes.
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[height=0.6\textheight]{../../figures/fig2} 
+
+}
+
+\caption{Risk of Bias Assessment Summary}\label{fig:fig2}
+\end{figure}
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[height=1\textheight]{../../figures/figure3} 
+
+}
+
+\caption{Contour Enhanced Funnel Plot of Delayed Retention Outcomes}\label{fig:fig3}
+\end{figure}
+
+\hypertarget{results-of-synthesis}{%
+\subsection{Results of Synthesis}\label{results-of-synthesis}}
+
+Delayed retention effect sizes and their standard errors are displayed in a contour enhanced funnel plot in Figure 3. Effect sizes and their 95\% confidence intervals for all three time points are displayed in a forest plot in Figure 4.
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[height=1.8\textheight]{../../figures/fig4} 
+
+}
+
+\caption{Forest Plot of Effect Sizes and Multilevel Model Estimates of Effect Sizes at Each Time Point. Black polygons represent 95\% confidence intervals and error bars represent 95\% prediction intervals.}\label{fig:fig4}
+\end{figure}
+
+\hypertarget{aquisition}{%
+\subsubsection{Aquisition}\label{aquisition}}
+
+Hedges' \emph{g} values ranged from -1.27 to 1.59 at acquisition. The average effect as estimated by a multilevel model was .19, with the 95\% confidence interval (CI) ranging from -.11 to .49. There appeared to be substantial heterogeneity among the true effects (\emph{Q} = 240.5, \emph{df} = 67, \emph{p} \textless{} .0001), with the larger part of the heterogeneity due to differences between studies (\(\hat{\small\sigma}\)\textsubscript{1} = .2462) as well as substantial heterogeneity between time points (\(\hat{\small\sigma}\)\textsubscript{2} = .1188). The 95\% prediction interval for the effect of reduced feedback frequency at acquisition ranged from -1.03 to 1.42, encompassing effect sizes that are very large in both directions. These results suggest that the effect of reduced feedback frequency may differ widely from study to study, and we cannot be confident in which direction the effect will be on average.
+
+\hypertarget{immediate-retention}{%
+\subsubsection{Immediate Retention}\label{immediate-retention}}
+
+Hedges' \emph{g} values ranged from -1.51 to 1.36 at immediate retention. According to the multilevel model, the average effect was .01 with the 95\% CI ranging from -.30 to 32. The 95\% prediction interval ranged from -1.21 to 1.24. Again, these results suggest the effect at immediate retention may vary from very large benefits for reduced feedback frequency to very large benefits for 100\% feedback frequency. As with the acquisition results, we cannot be confident in the direction of the average effect at immediate retention.
+
+\hypertarget{delayed-retention}{%
+\subsubsection{Delayed Retention}\label{delayed-retention}}
+
+The Hedges' \emph{g} values at delayed retention ranged from -2.14 to 1.92. The average effect size as estimated by the multilevel model was .19. The 95\% CI was -.05 to .43 and the 95\% prediction interval was -1.02 to 1.40. In line with the previous two time points, these results suggest that any individual study may find results ranging from very large effects in favor of a reduced feedback frequency to very large effects in favor of a 100\% frequency. Again, we cannot be confident in the average direction of the true effects at delayed retention.
+
+\hypertarget{acquisition-vs.-delayed-retention}{%
+\subsubsection{Acquisition vs.~Delayed Retention}\label{acquisition-vs.-delayed-retention}}
+
+The difference in Hedges' \emph{g} between acquisition and delayed retention time points was estimated as -.0008 (smaller effect at delayed retention) by the multilevel model. The 95\% CI ranged from -.32 to .32, suggesting we cannot be confident in the direction of the average difference between time points, if such a difference exists.
+
+\hypertarget{immediate-vs.-delayed-retention}{%
+\subsubsection{Immediate vs.~Delayed Retention}\label{immediate-vs.-delayed-retention}}
+
+The difference between immediate and delayed retention was estimated as .18 (larger effect at delayed retention) by the multilevel model, with a 95\% CI ranging from -.16 to .52. These results suggest we cannot be confident in the direction of the average difference between immediate and delayed retention, if such a difference exists.
+
+\hypertarget{categorical-moderators}{%
+\subsubsection{Categorical Moderators}\label{categorical-moderators}}
+
+The following moderators failed to account for a significant proportion of the heterogeneity in effect sizes: age (child vs.~adult; \emph{p} = .28), skill level (novice vs.~experienced; \emph{p} = .61), whether the feedback schedule was faded (faded vs.~not-faded; \emph{p} = .60), whether the reduced frequency group was yoked to another group (yoked vs.~not-yoked; \emph{p} = .21), the type of feedback provided (absolute timing error, constant error, form, other-precise, other-qualitative, relative timing error, root mean square error; \emph{p} = .90), and the measure included (absolute timing error, absolute constant error, absolute error, total error, form, other, relative timing error, variable error; \emph{p} = .26).\footnote{We also conducted a more powerful probe of heterogeneity among outcome measures by including all extracted measures. We pooled measures of spatial error together and measures of temporal error together and fit a four-level mixed model with measure nested in time nested in study, and measure-type included as a moderator. Measure-type again failed to account for a significant proportion of heterogeneity, \emph{p} = .81.}
+
+The task-type moderator (in motion-constant, stable-constant, stable-variable) significantly interacted with time point (\emph{Q-M} = 16.75, \emph{df} = 8, \emph{p} = .033). Further inspection revealed that only two studies included an ``in motion-constant'' task, one of which (Drews, Pacheco, Bastos, \& Tani, 2021) reported the largest effect size in the dataset at delayed retention (\emph{g} = -2.14). Removing this single effect resulted in the moderator analysis no longer detecting a significant effect of the task-type moderator (\emph{p} = .37).
+
+Bandwidth feedback protocols were not included in the primary analyses, so a special moderator analysis was conducted with bandwidth effects added to the dataset. There was no significant difference between bandwidth and non-bandwidth reduced feedback frequencies at any time point (\emph{p} = .61).
+
+\hypertarget{meta-regression-models}{%
+\subsubsection{Meta-regression Models}\label{meta-regression-models}}
+
+Continuous moderators were included separately in multilevel meta-regression models including an interaction with time point. None of the following moderators accounted for a significant proportion of the heterogeneity in effect sizes: number of acquisition trials (\emph{p} = .13), number of acquisition days (\emph{p} = .20), relative feedback frequency (\emph{p} = .73), immediate retention interval (in minutes -- immediate retention: \emph{p} = .44; delayed retention: \emph{p} = .89), delayed retention interval (in days -- only delayed retention time point tested; \emph{p} = .61).
+
+An additional analysis of feedback frequency was conducted by including effects from studies that contained multiple feedback frequency groups. Since all feedback frequency groups in a given study share the same 100\% comparison group, the sample size of the 100\% groups in such studies was divided by the number of comparisons in an (imperfect) effort to avoid double counting participants (Higgins et al., 2019). Feedback frequency was not a significant moderator in the analysis (\emph{p} = .42).
+
+\hypertarget{selection-bias}{%
+\subsubsection{Selection Bias}\label{selection-bias}}
+
+Weight-function selection models were fit at each time point as the primary preregistered method for addressing publication bias. The selection model estimated the average effect at acquisition as \emph{g} = .02, 95\% CI {[}-.44, .48{]} and found that non-significant results were 51\% as likely to survive selection as significant results. The likelihood ratio test found that the selection model did not provide a significantly better fit to the data than the naïve random effects model, \emph{p} = .47.
+
+There was only one significant result in favor of a reduced frequency of feedback at immediate retention, while there were two significant results in favor of 100\% feedback. As such, a two-sided selection model with a .05 cut point was fit to the immediate retention data. The model estimated the average effect as \emph{g} = .07, 95\% CI {[}-.44, .57{]}, but the likelihood ratio test did not indicate a significantly better fit for the selection model, \emph{p} = .302.
+
+The selection model estimated the average effect at delayed retention as \emph{g} = .06, 95\% CI {[}-.30, .42{]} and found that non-significant results were 63\% as likely to survive selection as significant results. Again, the likelihood ratio test failed to find a significant improvement in fit for the selection model compared to the naïve random effects model, \emph{p} = .526.
+
+The results of the RoBMA analysis of delayed retention data estimated the mean effect of reduced feedback frequency as \emph{g} = .021, with a 95\% credible interval of -.062 to .279. The analysis found moderate evidence for an absence of an effect of reduced feedback frequency, suggesting the data were over 4 times more likely under the null model (BF01 = 4.22). The analysis also found weak evidence against the existence of publication bias (BF01 = 1.8), and very strong evidence of heterogeneity (BF10 = 418119).
+
+The \emph{z}-curve model estimated the conditional power of the significant results at delayed retention as 39\% (ERR), suggesting exact replication attempts of the included significant results would be expected to succeed 39\% of the time. This estimate was made with substantial uncertainty, 95\% CI {[}.05, .74{]}. Further, the unconditional power of any study that has potentially been conducted was estimated as 27\% (EDR), suggesting roughly one in four studies would find a significant result. Again, this estimate was made with substantial uncertainty, 95\% CI {[}.05, .69{]}.
+
+\hypertarget{smallest-effect-size-of-interest}{%
+\subsubsection{Smallest Effect Size of Interest}\label{smallest-effect-size-of-interest}}
+
+We prespecified our smallest effect size of interest as \emph{g} = .10. Although we planned to conduct an equivalence test with upper and lower bounds of .10 on any non-significant result, cursory analysis of the 95\% confidence intervals revealed that we could not reject effects as large as .10 for any of our analyses. Therefore, while all analyses reported above failed to find significant evidence against the null hypothesis, we also failed to find evidence against effects at least as large as our smallest effect size of interest. Our results are thus uniformly inconclusive.
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+The results of this meta-analysis suggest a high degree of uncertainty about the effect of reducing feedback frequency on acquisition, immediate retention, and delayed retention performance. At each time point, the 95\% prediction intervals ranged from greater than a 1 \emph{SD} advantage for reduced frequencies to greater than a 1 \emph{SD} advantage for a 100\% frequency. These prediction intervals encompass the full range of plausible results and offer no further understanding of the impact of feedback frequency on motor learning and performance; we therefore failed to support all primary predictions. Notably, we did not observe a significant benefit for 100\% frequencies at acquisition, nor did we observe significant benefits for reduced frequencies at immediate and delayed retention. Further, we did not find evidence of so-called reversal effects: we saw no significant change in effectiveness from acquisition to delayed retention, or from immediate retention to delayed retention. We also did not find statistical evidence of substantial selection effects (publication bias) in this literature. This was particularly surprising because Marschall, Bund, and Wiemeyer (2007) suggested selection bias was prevalent in the reporting of results, although perhaps our efforts to digitize the plots from papers with insufficient data reporting mitigated this issue. \textcolor{red}{Previous meta-analytic investigations of the motor learning literature have reported evidence of publication bias} (Lohse, Buchanan, \& Miller, 2016; McKay, Yantha, Hussien, Carter, \& Ste-Marie, 2021). \textcolor{red}{Although we failed to identify selective reporting in this analysis, we suspect at least some selective reporting was present in the feedback frequency literature.}
+
+Despite the large amount of heterogeneity estimated by our models, none of our prespecified moderators were able to account for a significant proportion of the heterogeneity. Specifically, we found no evidence that participant age (child v. adult v. older adult) or skill level (i.e.~novice v. expert) significantly impacted the effect of feedback frequency. Further, the frequency of feedback, amount of practice, and feedback provisioning scheme (i.e., bandwidth, faded schedule, yoked schedule) were all non-significantly related to the effect of reduced feedback frequency. Similarly, the content of the feedback, type of outcome measure, and type of skill being measured were all also non-significant. Methodological considerations such as the immediate and delayed retention test intervals also failed to account for a significant proportion of the observed heterogeneity. Overall, our results failed to support any of the \emph{a priori} predictions we put forward in our preregistration document.
+
+The uncertain results of this meta-analysis may be due to highly volatile effects of feedback frequency that we cannot yet predict, but another possibility is that the evidence included in this analysis was too underpowered and biased to lead to more conclusive results. Indeed, the \emph{z}-curve estimate of unconditional power was 27\%, suggesting nearly three in four experiments would fail to detect an effect. Given that 33\% power has been previously suggested as a threshold under which individual studies can be considered ``woefully underpowered'' (Simonsohn, 2015; Simonsohn, Nelson, \& Simmons, 2014), the present literature may be considered woefully underpowered overall. Significant results from experiments with \textasciitilde20-30\% power are expected to produce estimates exaggerated by 1.75 -- 2.2 times the true effect, as well as effects in the wrong direction a small percentage of the time (Gelman \& Carlin, 2014). Further, when power dips below 10\%, significant results are in the wrong direction a high percentage of the time and exaggerated by greater than 350\%. It is possible the sample of experiments meta-analyzed in this paper were of such low power that, when combined with some selection for statistical significance, they resulted in exaggerated estimates in both directions, causing our prediction intervals to be too wide to be useful.
+
+\hypertarget{limitations}{%
+\subsection{Limitations}\label{limitations}}
+
+Due to time and resource limitations our literature search was limited in scope to two databases and only English-language publications. Given that our forward and backward reference tracing and targeted author search resulted in over 600 additional references being identified for screening, we may have missed relevant articles by not searching additional databases. We were also unable to access ten potentially relevant articles, seven of which were unpublished theses from 1975 or earlier. Relatedly, we were unable to include any unpublished theses in our study and were thus unable to test publication status as a potential moderator, as originally planned. We were also unable to complete our preplanned evaluation of the impact of expert skill levels, older adults, and in motion-variable tasks due to a dearth of available data.
+
+An additional limitation to our study was that we failed to prespecify any moderators that significantly accounted for heterogeneity in our sample. It remains possible that different moderator specifications may have accounted for much of the heterogeneity and revealed more interesting results than the ones we discuss here. We note that our dataset and code are publicly available, so others with more creativity or insight are free to explore these possibilities further. Nevertheless, seeing our analysis inflates the risk that subsequent efforts to fit moderators will make a Type 1 error, so our failure to anticipate crucial moderators \emph{a priori} remains an important limitation.
+
+With respect to assessing the evidence in support of the guidance hypothesis, the present study is limited to only studies of reduced feedback frequency and does not include other manipulations predicted to be more effective than a 100\% feedback schedule (Salmoni, Schmidt, \& Walter, 1984). For example, providing feedback as a summary of the previous \emph{n} trials has the advantage of including information about every trial while also withholding feedback after some trials (Schmidt, Young, Swinnen, \& Shapiro, 1989). We did not evaluate the evidence with respect to summary or other feedback provisioning manipulations and therefore our conclusions are limited to reduced frequency and bandwidth feedback interventions.
+
+\hypertarget{implications}{%
+\subsection{Implications}\label{implications}}
+
+Feedback is often described as one of the most important variables for motor learning and performance (Bilodeau \& Bilodeau, 1961; Lee \& Carnahan, 2021; Magill \& Anderson, 2012; Salmoni, Schmidt, \& Walter, 1984; Schmidt, Lee, Winstein, Wulf, \& Zelaznik, 2018). Which relative frequency of feedback should be provided to optimize learning and performance is one of the most fundamental questions we can ask about feedback, and while heterogeneity in optimal frequencies has long been acknowledged (Wulf \& Shea, 2004), there has been a general consensus that 100\% feedback frequencies are suboptimal for motor learning (Anderson, Magill, Mayo, \& Steel, 2019; Lee \& Carnahan, 2021). The results of this meta-analysis suggest that we have yet to accumulate sufficient evidence to conclude anything substantive about the impact of relative feedback frequency on learning or performance. Our results indicate that anything plausible could happen when comparing 100\% feedback to a reduced frequency, including large learning disadvantages when providing feedback on a reduced schedule. We remain unable to predict when reduced frequencies of feedback may offer advantages or disadvantages and therefore it is our stance that motor learning scientists should abstain from making substantive recommendations regarding feedback frequency to practitioners.
+
+The ostensive `reversal effect' from acquisition to retention when comparing 100\% to reduced feedback frequencies has provided a partial basis for the recommended use of delayed retention tests in motor learning research (Kantak \& Winstein, 2012; Lee \& Carnahan, 2021; Salmoni, Schmidt, \& Walter, 1984; Schmidt, Lee, Winstein, Wulf, \& Zelaznik, 2018). Here again, recommendations based on the feedback frequency literature appear premature. Perhaps data from other phenomena are more convincing, although we are not aware of a meta-analytic investigation of the reversal phenomenon in any motor learning literature. Future research should examine potential reversals with multilevel/multivariate meta-analyses given the importance of reversal effects to the rationale for modern motor learning experimental design and analysis.
+
+The guidance hypothesis remains one of the most influential perspectives in motor learning (Anderson, Magill, Mayo, \& Steel, 2019). The present meta-analysis finds that the extant literature fails to support or disconfirm its predictions regarding feedback frequency. Despite nearly four decades of research, we are in no better position to evaluate this central prediction of the guidance hypothesis than we were when it was published. For progress to begin, a major overhaul to current research practices will be required. The median sample size per group in this meta-analysis was 13. To achieve 80\% power to detect a main effect with a two-group design, \emph{n} = 436 per group is required to detect the multilevel estimate of \emph{g} = .19 at delayed retention. That number grows to 1571 per group to detect our smallest effect size of interest of .1. Note that the bias-corrected point estimates from this meta-analysis were smaller still. Detecting significant interactions will require even larger samples. Nevertheless, there are a number of approaches researchers can take to reduce these requirements, such as using sequential analysis (Lakens, 2014; Wald, 2004), including prespecified predictive covariates such as pretest performance and/or lengthening the retention test (Maxwell, Cole, Arvey, \& Salas, 1991), and using one-tailed \emph{p}-values to reflect the directional nature of guidance predictions. Perhaps most importantly, researchers can adopt a multi-lab model, wherein each laboratory contributes only a fraction of the overall sample, spreading the costs of data collection across multiple labs and (potentially) funding sources. Perhaps a collaborative spirit can succeed where years of traditional motor behavior research has not, and feedback frequency can begin to be understood based on robust empirical evidence.
+
+\hypertarget{other-information}{%
+\subsection{Other Information}\label{other-information}}
+
+The preregistration, data, materials, and code for this meta-analysis can be found at here: \url{https://osf.io/hgba7/?view_only=9e6816867b8c4d6c8cd6ebb7929097d5}. A description of deviations from our preregistered plan and justifications for these changes can be found below in Table \ref{tab:table2}.
+
+\hypertarget{competing-interests}{%
+\subsection{Competing Interests}\label{competing-interests}}
+
+McKay and Ste-Marie have published one paper that failed to find the pattern of results predicted by guidance hypothesis; no other competing interests.
+
+\begingroup\fontsize{9.5}{11.5}\selectfont
+
+\begin{landscape}
+\begin{longtable}[l]{>{\raggedright\arraybackslash}p{6.5cm}>{\raggedright\arraybackslash}p{6.5cm}>{\raggedright\arraybackslash}p{6.5cm}}
+\caption{\label{tab:table2}Reasons for Deviations from Preregistration}\\
+\toprule
+Preregistration & Deviation & Reason\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:table2}Reasons for Deviations from Preregistration \textit{(continued)}}\\
+\toprule
+Preregistration & Deviation & Reason\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+Investigate sample in Kantak \& Winstein (2012) for publication bias. & We did not re-analyze the Kantak \& Winstein sample. & The Kantak \& Winsten (2012) study sampled a variety of practice and feedback interventions that we suspected would be heterogenous in effect. Upon reflection, we felt that applying publication bias tests with this sample would be inappropriate.\\
+\addlinespace
+Outcome measure priority list did not include measure total error (E). & We added E to our priority list in the fourth position. & We failed to anticipate E as a measure when constructing our priority list. Because E provides an overall error score, we placed it above component error scores like absolute and relative timing error.\\
+\addlinespace
+Standardized mean change from immediate to delayed retention sensitivity analysis. & We did not include any analyses of standardized mean change. & We did not have access to the raw data from any study that included both an immediate and delayed retention test and were therefore unable to calculate a range of plausible correlation statistics for this specific comparison. Based on our multilevel analysis and additional sensitivity analyses, we felt this additional sensitivity analysis was unnecessary.\\
+\addlinespace
+Prespecified analysis script & The final analysis script included substantially more data wrangling and sensitivity analyses than originally included. Some of the variables took on different names than originally specified. & Analyzing the data as thoroughly as possible required more code than initially developed. All the preregistered analyses remained in the final code.\\*
+\end{longtable}
+\end{landscape}
+\endgroup{}
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begingroup
+\interlinepenalty = 10000
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+References marked with an asterisk (*) indicate studies included in the meta-analysis.
+
+\endgroup
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-Agethen2016}{}%
+\textsuperscript{*} Agethen, M., \& Krause, D. (2016). Effects of bandwidth feedback on the automatization of an arm movement sequence. \emph{Human Movement Science}, \emph{45}, 71--83.
+
+\leavevmode\hypertarget{ref-Albuquerque2014}{}%
+\textsuperscript{*} Albuquerque, M. R., Lage, G. M., Ugrinowitsch, H., Corrêa, U. C., \& Benda, R. N. (2014). Effects of knowledge of results frequency on the learning of generalized motor programs and parameters under conditions of constant practice. \emph{Perceptual and Motor Skills}, \emph{119}(1), 69--81.
+
+\leavevmode\hypertarget{ref-Anderson2019}{}%
+Anderson, D. I., Magill, R. A., Mayo, A. M., \& Steel, K. A. (2019). Enhancing motor skill acquisition with augmented feedback. In N. J. Hodges \& A. M. Williams (Eds.), \emph{Skill acquisition in sport} (3rd ed., pp. 3--19). Third Edition. {{}} New York : Routledge, 2019. {{}} {``First edition published by Routledge 2004''}--T.p. verso. {{}} Previous edition: 2012.: Routledge. Retrieved from \url{https://www.taylorfrancis.com/books/9781351189743/chapters/10.4324/9781351189750-1}
+
+\leavevmode\hypertarget{ref-Badets2010}{}%
+\textsuperscript{*} Badets, A., \& Blandin, Y. (2010). Feedback schedules for motor-skill learning: The similarities and differences between physical and observational practice. \emph{Journal of Motor Behavior}, \emph{42}(4), 257--268.
+
+\leavevmode\hypertarget{ref-Badets2012}{}%
+\textsuperscript{*} Badets, A., \& Blandin, Y. (2012). Feedback and intention during motor-skill learning: A connection with prospective memory. \emph{Psychological Research}, \emph{76}(5), 601--610.
+
+\leavevmode\hypertarget{ref-Bartos2021}{}%
+Bartoš, F., Maier, M., Wagenmakers, E.-J., Doucouliagos, H., \& Stanley, T. (2021). \emph{No need to choose: Robust bayesian meta-analysis with competing publication bias adjustment methods}.
+
+\leavevmode\hypertarget{ref-Bartoux1612020}{}%
+Bartoš, F., \& Schimmack, U. (2020). \emph{Zcurve: An r package for fitting z-curves}. Retrieved from \url{https://CRAN.R-project.org/package=zcurve}
+
+\leavevmode\hypertarget{ref-Beall2012}{}%
+Beall, J. (2012). Beall's list of predatory publishers 2013. \emph{Scholarly Open Access}.
+
+\leavevmode\hypertarget{ref-Becker2000}{}%
+Becker, B. J. (2000). 17 - {Multivariate} {Meta}-analysis. In H. E. A. Tinsley \& S. D. Brown (Eds.), \emph{Handbook of {Applied} {Multivariate} {Statistics} and {Mathematical} {Modeling}} (pp. 499--525). San Diego: Academic Press. \url{https://doi.org/10.1016/B978-012691360-6/50018-5}
+
+\leavevmode\hypertarget{ref-Bilodeau1961}{}%
+Bilodeau, E. A., \& Bilodeau, I. M. (1961). Motor-skills learning. \emph{Annual Review of Psychology}, \emph{12}(1), 243--280.
+
+\leavevmode\hypertarget{ref-Blandin2008}{}%
+\textsuperscript{*} Blandin, Y., Toussaint, L., \& Shea, C. H. (2008). Specificity of practice: Interaction between concurrent sensory information and terminal feedback. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{34}(4), 994.
+
+\leavevmode\hypertarget{ref-Borenstein2021}{}%
+Borenstein, M., Hedges, L. V., Higgins, J. P., \& Rothstein, H. R. (2021). \emph{Introduction to meta-analysis}. John Wiley \& Sons.
+
+\leavevmode\hypertarget{ref-Bruechert2003}{}%
+\textsuperscript{*} Bruechert, L., Lai, Q., \& Shea, C. H. (2003). Reduced knowledge of results frequency enhances error detection. \emph{Research Quarterly for Exercise and Sport}, \emph{74}(4), 467--472.
+
+\leavevmode\hypertarget{ref-Burtner2014}{}%
+\textsuperscript{*} Burtner, P. A., Leinwand, R., Sullivan, K. J., Goh, H.-T., \& Kantak, S. S. (2014). Motor learning in children with hemiplegic cerebral palsy: Feedback effects on skill acquisition. \emph{Developmental Medicine \& Child Neurology}, \emph{56}(3), 259--266.
+
+\leavevmode\hypertarget{ref-Carter2019}{}%
+Carter, E. C., Schönbrodt, F. D., Gervais, W. M., \& Hilgard, J. (2019). Correcting for {Bias} in {Psychology}: {A} {Comparison} of {Meta}-{Analytic} {Methods}. \emph{Advances in Methods and Practices in Psychological Science}, \emph{2}(2), 115--144. \url{https://doi.org/10.1177/2515245919847196}
+
+\leavevmode\hypertarget{ref-Cohen1988}{}%
+Cohen, J. (1988). \emph{Statistical power analysis for the behavioral sciences} (2nd ed). Hillsdale, N.J: L. Erlbaum Associates.
+
+\leavevmode\hypertarget{ref-Covidence}{}%
+Covidence. (n.d.). \emph{Covidence systematic review software, veritas health innovation, melbourne, australia}.
+
+\leavevmode\hypertarget{ref-DelRe2013}{}%
+Del Re, A. C. (2013). \emph{Compute.es: Compute effect sizes}. Retrieved from \url{https://cran.r-project.org/package=compute.es}
+
+\leavevmode\hypertarget{ref-Dickersin1987}{}%
+Dickersin, K., Chan, S., Chalmersx, T., Sacks, H., \& Smith Jr, H. (1987). Publication bias and clinical trials. \emph{Controlled Clinical Trials}, \emph{8}(4), 343--353.
+
+\leavevmode\hypertarget{ref-Drews2021}{}%
+\textsuperscript{*} Drews, R., Pacheco, M. M., Bastos, F. H., \& Tani, G. (2021). Knowledge of results do not affect self-efficacy and skill acquisition on an anticipatory timing task. \emph{Journal of Motor Behavior}, \emph{53}(3), 275--286. \url{https://doi.org/10.1080/00222895.2020.1772711}
+
+\leavevmode\hypertarget{ref-Gelman2014}{}%
+Gelman, A., \& Carlin, J. (2014). Beyond power calculations: Assessing type s (sign) and type m (magnitude) errors. \emph{Perspectives on Psychological Science}, \emph{9}(6), 641--651.
+
+\leavevmode\hypertarget{ref-Gelman2006}{}%
+Gelman, A., \& Stern, H. (2006). The difference between {``significant''} and {``not significant''} is not itself statistically significant. \emph{The American Statistician}, \emph{60}(4), 328--331.
+
+\leavevmode\hypertarget{ref-Gentile2000}{}%
+Gentile, A. M. (2000). Skill acquisition: Action, movement, and neuromotor processes. In J. H. Carr \& R. D. Shepherd (Eds.), \emph{Movement science: Foundations for physical therapy} (2nd ed., pp. 111--187). Aspen: Rockville, MD.
+
+\leavevmode\hypertarget{ref-Goh2012}{}%
+\textsuperscript{*} Goh, H.-T., Kantak, S. S., \& Sullivan, K. J. (2012). Movement pattern and parameter learning in children: Effects of feedback frequency. \emph{Research Quarterly for Exercise and Sport}, \emph{83}(2), 346--352.
+
+\leavevmode\hypertarget{ref-Guadagnoli2001}{}%
+\textsuperscript{*} Guadagnoli, M. A., \& Kohl, R. M. (2001). Knowledge of results for motor learning: Relationship between error estimation and knowledge of results frequency. \emph{Journal of Motor Behavior}, \emph{33}(2), 217--224.
+
+\leavevmode\hypertarget{ref-Guadagnoli2004}{}%
+Guadagnoli, M. A., \& Lee, T. D. (2004). Challenge point: A framework for conceptualizing the effects of various practice conditions in motor learning. \emph{Journal of Motor Behavior}, \emph{36}(2), 212--224.
+
+\leavevmode\hypertarget{ref-Guadagnoli2002}{}%
+\textsuperscript{*} Guadagnoli, M. A., Leis, B., Van Gemmert, A. W., \& Stelmach, G. E. (2002). The relationship between knowledge of results and motor learning in parkinsonian patients. \emph{Parkinsonism \& Related Disorders}, \emph{9}(2), 89--95.
+
+\leavevmode\hypertarget{ref-Guay1999}{}%
+\textsuperscript{*} Guay, M., Salmoni, A., \& Lajoie, Y. (1999). The effects of different knowledge of results spacing and summarizing techniques on the acquisition of a ballistic movement. \emph{Research Quarterly for Exercise and Sport}, \emph{70}(1), 24--32.
+
+\leavevmode\hypertarget{ref-Higgins2011}{}%
+Higgins, J. P., Altman, D. G., Gøtzsche, P. C., Jüni, P., Moher, D., Oxman, A. D., \ldots{} Sterne, J. A. (2011). The cochrane collaboration's tool for assessing risk of bias in randomised trials. \emph{Bmj}, \emph{343}.
+
+\leavevmode\hypertarget{ref-Higgins2019}{}%
+Higgins, J. P., Thomas, J., Chandler, J., Cumpston, M., Li, T., Page, M. J., \& Welch, V. A. (2019). \emph{Cochrane handbook for systematic reviews of interventions}. John Wiley \& Sons.
+
+\leavevmode\hypertarget{ref-IntHout2016}{}%
+IntHout, J., Ioannidis, J. P. A., Rovers, M. M., \& Goeman, J. J. (2016). Plea for routinely presenting prediction intervals in meta-analysis. \emph{BMJ Open}, \emph{6}(7), e010247. \url{https://doi.org/10.1136/bmjopen-2015-010247}
+
+\leavevmode\hypertarget{ref-Kantak2012}{}%
+Kantak, S. S., \& Winstein, C. J. (2012). Learning--performance distinction and memory processes for motor skills: A focused review and perspective. \emph{Behavioural Brain Research}, \emph{228}(1), 219--231.
+
+\leavevmode\hypertarget{ref-Keller2014}{}%
+\textsuperscript{*} Keller, M., Lauber, B., Gehring, D., Leukel, C., \& Taube, W. (2014). Jump performance and augmented feedback: Immediate benefits and long-term training effects. \emph{Human Movement Science}, \emph{36}, 177--189.
+
+\leavevmode\hypertarget{ref-Kohl1996}{}%
+\textsuperscript{*} Kohl, R. M., \& Guadagnoli, M. A. (1996). The scheduling of knowledge of results. \emph{Journal of Motor Behavior}, \emph{28}(3), 233--240.
+
+\leavevmode\hypertarget{ref-Lakens2014}{}%
+Lakens, D. (2014). Performing high-powered studies efficiently with sequential analyses. \emph{European Journal of Social Psychology}, \emph{44}(7), 701--710.
+
+\leavevmode\hypertarget{ref-Lee2021}{}%
+Lee, T. D., \& Carnahan, H. (2021). Motor learning: Reflections on the past 40 years of research. \emph{Kinesiology Review}, \emph{1}(aop), 1--9.
+
+\leavevmode\hypertarget{ref-Lohse2016}{}%
+Lohse, K., Buchanan, T., \& Miller, M. (2016). Underpowered and overworked: Problems with data analysis in motor learning studies. \emph{Journal of Motor Learning and Development}, \emph{4}(1), 37--58. \url{https://doi.org/10.1123/jmld.2015-0010}
+
+\leavevmode\hypertarget{ref-Lotfi2018}{}%
+\textsuperscript{*} Lotfi, G., Hatami, F., \& Zivari, F. (2018). Effect of model's skill level and frequency of feedback on learning of complex serial aiming task. \emph{Physical Education of Students}, (5), 252--257.
+
+\leavevmode\hypertarget{ref-Lopez2017}{}%
+López-López, J. A., Van den Noortgate, W., Tanner-Smith, E. E., Wilson, S. J., \& Lipsey, M. W. (2017). Assessing meta-regression methods for examining moderator relationships with dependent effect sizes: A monte carlo simulation. \emph{Research Synthesis Methods}, \emph{8}(4), 435--450.
+
+\leavevmode\hypertarget{ref-Magill2012}{}%
+Magill, R. A., \& Anderson, D. I. (2012). The roles and uses of augmented feedback in motor skill acquisition. \emph{Skill Acquisition in Sport: Research, Theory and Practice}, 3--21.
+
+\leavevmode\hypertarget{ref-Maier2020}{}%
+Maier, M., Bartoš, F., \& Wagenmakers, E.-J. (2020). \emph{Robust bayesian meta-analysis: Addressing publication bias with model-averaging}. PsyArXiv. Retrieved from PsyArXiv website: \url{https://osf.io/u4cns}
+
+\leavevmode\hypertarget{ref-Marschall2007}{}%
+Marschall, F., Bund, A., \& Wiemeyer, J. (2007). Does frequent augmented feedback really degrade learning? A meta-analysis. \emph{Bewegung Und Training}, \emph{1}, 75--86.
+
+\leavevmode\hypertarget{ref-Maxwell1991}{}%
+Maxwell, S. E., Cole, D. A., Arvey, R. D., \& Salas, E. (1991). \emph{A comparison of methods for increasing power in randomized between-subjects designs}. 10.
+
+\leavevmode\hypertarget{ref-McCullagh1990}{}%
+\textsuperscript{*} McCullagh, P., \& Little, W. S. (1990). Demonstrations and knowledge of results in motor skill acquisition. \emph{Perceptual and Motor Skills}, \emph{71}(3), 735--742.
+
+\leavevmode\hypertarget{ref-McKay2020}{}%
+\textsuperscript{*} McKay, B., \& Ste-Marie, D. M. (2020). Autonomy support and reduced feedback frequency have trivial effects on learning and performance of a golf putting task. \emph{Human Movement Science}, \emph{71}, 102612. \url{https://doi.org/10.1016/j.humov.2020.102612}
+
+\leavevmode\hypertarget{ref-McKay2021}{}%
+McKay, B., Yantha, Z. D., Hussien, J., Carter, M. J., \& Ste-Marie, D. M. (2021). \emph{Meta-analytic findings in the self-controlled motor learning literature: Underpowered, biased, and lacking evidential value}. PsyArXiv. Retrieved from PsyArXiv website: \url{https://psyarxiv.com/8d3nb/}
+
+\leavevmode\hypertarget{ref-Memon2018}{}%
+Memon, A. R. (2018). Predatory journals spamming for publications: What should researchers do? \emph{Science and Engineering Ethics}, \emph{24}(5), 1617--1639.
+
+\leavevmode\hypertarget{ref-Moeyaert2017}{}%
+Moeyaert, M., Ugille, M., Natasha Beretvas, S., Ferron, J., Bunuan, R., \& Van den Noortgate, W. (2017). Methods for dealing with multiple outcomes in meta-analysis: A comparison between averaging effect sizes, robust variance estimation and multilevel meta-analysis. \emph{International Journal of Social Research Methodology}, \emph{20}(6), 559--572.
+
+\leavevmode\hypertarget{ref-Oliveira2009}{}%
+\textsuperscript{*} Oliveira, D. L. de, Corrêa, U. C., Gimenez, R., Basso, L., \& Tani, G. (2009). Relative frequency of knowledge of results and task complexity in the motor skill acquisition. \emph{Perceptual and Motor Skills}, \emph{109}(3), 831--840.
+
+\leavevmode\hypertarget{ref-Ong2020}{}%
+Ong, N. T., \& Hodges, N. J. (2020). MOTOR LEARNING. \emph{The Routledge International Encyclopedia of Sport and Exercise Psychology: Volume 1: Theoretical and Methodological Concepts}.
+
+\leavevmode\hypertarget{ref-Page2021}{}%
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., \ldots{} Moher, D. (2021). Updating guidance for reporting systematic reviews: Development of the PRISMA 2020 statement. \emph{Journal of Clinical Epidemiology}, \emph{134}, 103--112.
+
+\leavevmode\hypertarget{ref-Pustejovsky2020}{}%
+Pustejovsky, J. E., \& Tipton, E. (2020). \emph{Meta-analysis with robust variance estimation: Expanding the range of working models}. MetaArXiv. Retrieved from MetaArXiv website: \url{https://osf.io/preprints/metaarxiv/vyfcj/}
+
+\leavevmode\hypertarget{ref-Ranganathan2009}{}%
+\textsuperscript{*} Ranganathan, R., \& Newell, K. M. (2009). Influence of augmented feedback on coordination strategies. \emph{Journal of Motor Behavior}, \emph{41}(4), 317--330.
+
+\leavevmode\hypertarget{ref-Rohatgi2020}{}%
+Rohatgi, A. (2020). \emph{Webplotdigitizer: Version 4.4}. Retrieved from \url{https://automeris.io/WebPlotDigitizer}
+
+\leavevmode\hypertarget{ref-Ropovik2021}{}%
+Ropovik, I., Adamkovic, M., \& Greger, D. (2021). Neglect of publication bias compromises meta-analyses of educational research. \emph{Plos One}, \emph{16}(6), e0252415.
+
+\leavevmode\hypertarget{ref-Salmoni1984}{}%
+Salmoni, A. W., Schmidt, R. A., \& Walter, C. B. (1984). Knowledge of results and motor learning: A review and critical reappraisal. \emph{Psychological Bulletin}, \emph{95}(3), 355.
+
+\leavevmode\hypertarget{ref-Scammacca2014}{}%
+Scammacca, N., Roberts, G., \& Stuebing, K. K. (2014). Meta-analysis with complex research designs: Dealing with dependence from multiple measures and multiple group comparisons. \emph{Review of Educational Research}, \emph{84}(3), 328--364.
+
+\leavevmode\hypertarget{ref-Schmidt2018}{}%
+Schmidt, R. A., Lee, T. D., Winstein, C., Wulf, G., \& Zelaznik, H. N. (2018). \emph{Motor control and learning: A behavioral emphasis}. Human kinetics.
+
+\leavevmode\hypertarget{ref-Schmidt1989}{}%
+Schmidt, R. A., Young, D. E., Swinnen, S., \& Shapiro, D. C. (1989). Summary knowledge of results for skill acquisition: Support for the guidance hypothesis. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{15}(2), 352.
+
+\leavevmode\hypertarget{ref-Shewokis2000}{}%
+\textsuperscript{*} Shewokis, P. A., Kennedy, C. Z., \& Marsh, J. L. (2000). Effects of bandwidth knowledge of results on the performance and learning of a shoulder internal rotation isokinetic strength task. \emph{Isokinetics and Exercise Science}, \emph{8}(3), 129--139.
+
+\leavevmode\hypertarget{ref-Sigrist2013}{}%
+Sigrist, R., Rauter, G., Riener, R., \& Wolf, P. (2013). Augmented visual, auditory, haptic, and multimodal feedback in motor learning: A review. \emph{Psychonomic Bulletin \& Review}, \emph{20}(1), 21--53.
+
+\leavevmode\hypertarget{ref-Silva2017}{}%
+\textsuperscript{*} Silva, da L. de C. da, Pereira-Monfredini, C. F., \& Teixeira, L. A. (2017). Improved children's motor learning of the basketball free shooting pattern by associating subjective error estimation and extrinsic feedback. \emph{Journal of Sports Sciences}, \emph{35}(18), 1825--1830.
+
+\leavevmode\hypertarget{ref-Simonsohn2015}{}%
+Simonsohn, U. (2015). Small telescopes: Detectability and the evaluation of replication results. \emph{Psychological Science}, \emph{26}(5), 559--569.
+
+\leavevmode\hypertarget{ref-Simonsohn2014}{}%
+Simonsohn, U., Nelson, L. D., \& Simmons, J. P. (2014). P-curve: A key to the file-drawer. \emph{Journal of Experimental Psychology: General}, \emph{143}(2), 534.
+
+\leavevmode\hypertarget{ref-Stanley2017}{}%
+Stanley, T. D. (2017). Limitations of PET-PEESE and other meta-analysis methods. \emph{Social Psychological and Personality Science}, \emph{8}(5), 581--591.
+
+\leavevmode\hypertarget{ref-Steinhauer2000}{}%
+\textsuperscript{*} Steinhauer, K., \& Grayhack, J. P. (2000). The role of knowledge of results in performance and learning of a voice motor task. \emph{Journal of Voice}, \emph{14}(2), 137--145.
+
+\leavevmode\hypertarget{ref-Sullivan2008}{}%
+\textsuperscript{*} Sullivan, K. J., Kantak, S. S., \& Burtner, P. A. (2008). Motor learning in children: Feedback effects on skill acquisition. \emph{Physical Therapy}, \emph{88}(6), 720--732.
+
+\leavevmode\hypertarget{ref-VandenNoortgate2013}{}%
+Van den Noortgate, W., López-López, J. A., Marín-Martínez, F., \& Sánchez-Meca, J. (2013). Three-level meta-analysis of dependent effect sizes. \emph{Behavior Research Methods}, \emph{45}(2), 576--594.
+
+\leavevmode\hypertarget{ref-VandenNoortgate2015}{}%
+Van den Noortgate, W., López-López, J. A., Marín-Martínez, F., \& Sánchez-Meca, J. (2015). Meta-analysis of multiple outcomes: A multilevel approach. \emph{Behavior Research Methods}, \emph{47}(4), 1274--1294. \url{https://doi.org/10.3758/s13428-014-0527-2}
+
+\leavevmode\hypertarget{ref-Vevea2005}{}%
+Vevea, J. L., \& Woods, C. M. (2005). Publication bias in research synthesis: Sensitivity analysis using a priori weight functions. \emph{Psychological Methods}, \emph{10}(4), 16.
+
+\leavevmode\hypertarget{ref-Viechtbauer2010}{}%
+Viechtbauer, W. (2010). Conducting meta-analyses in r with the metafor package. \emph{Journal of Statistical Software}, \emph{36}(3), 1--48.
+
+\leavevmode\hypertarget{ref-Wald2004}{}%
+Wald, A. (2004). \emph{Sequential analysis}. Courier Corporation.
+
+\leavevmode\hypertarget{ref-Weeks1998}{}%
+\textsuperscript{*} Weeks, D. L., \& Kordus, R. N. (1998). Relative frequency of knowledge of performance and motor skill learning. \emph{Research Quarterly for Exercise and Sport}, \emph{69}(3), 224--230.
+
+\leavevmode\hypertarget{ref-Winstein1991}{}%
+Winstein, C. J. (1991). Knowledge of results and motor learning---implications for physical therapy. \emph{Physical Therapy}, \emph{71}(2), 140--149. \url{https://doi.org/10.1093/ptj/71.2.140}
+
+\leavevmode\hypertarget{ref-Winstein1990}{}%
+\textsuperscript{*} Winstein, C. J., \& Schmidt, R. A. (1990). Reduced frequency of knowledge of results enhances motor skill learning. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{16}(4), 677.
+
+\leavevmode\hypertarget{ref-Wu2011}{}%
+\textsuperscript{*} Wu, W. F., Young, D. E., Schandler, S. L., Meir, G., Judy, R. L., Perez, J., \& Cohen, M. J. (2011). Contextual interference and augmented feedback: Is there an additive effect for motor learning? \emph{Human Movement Science}, \emph{30}(6), 1092--1101.
+
+\leavevmode\hypertarget{ref-Wulf2010}{}%
+\textsuperscript{*} Wulf, G., Chiviacowsky, S., Schiller, E., \& Ávila, L. T. G. (2010). Frequent external focus feedback enhances motor learning. \emph{Frontiers in Psychology}, \emph{1}, 190.
+
+\leavevmode\hypertarget{ref-Wulf1994}{}%
+\textsuperscript{*} Wulf, G., Lee, T. D., \& Schmidt, R. A. (1994). Reducing knowledge of results about relative versus absolute timing: Differential effects on learning. \emph{Journal of Motor Behavior}, \emph{26}(4), 362--369.
+
+\leavevmode\hypertarget{ref-Wulf2016}{}%
+Wulf, G., \& Lewthwaite, R. (2016). Optimizing performance through intrinsic motivation and attention for learning: The OPTIMAL theory of motor learning. \emph{Psychonomic Bulletin \& Review}, \emph{23}(5), 1382--1414.
+
+\leavevmode\hypertarget{ref-Wulf1993}{}%
+\textsuperscript{*} Wulf, G., Schmidt, R. A., \& Deubel, H. (1993). Reduced feedback frequency enhances generalized motor program learning but not parameterization learning. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{19}(5), 1134.
+
+\leavevmode\hypertarget{ref-Wulf2004}{}%
+Wulf, G., \& Shea, C. H. (2004). Understanding the role of augmented feedback: The good, the bad and the ugly. In \emph{Skill acquisition in sport} (pp. 145--168). Routledge.
+
+\leavevmode\hypertarget{ref-Yamamoto2019}{}%
+\textsuperscript{*} Yamamoto, R., Akizuki, K., Kanai, Y., Nakano, W., Kobayashi, Y., \& Ohashi, Y. (2019). Differences in skill level influence the effects of visual feedback on motor learning. \emph{Journal of Physical Therapy Science}, \emph{31}(11), 939--945.
+
+\leavevmode\hypertarget{ref-Zamani2015}{}%
+\textsuperscript{*} Zamani, M. H., \& Zarghami, M. (2015). Effects of frequency of feedback on the learning of motor skill in preschool children. \emph{International Journal of School Health}, \emph{2}(1), 1--6.
+
+\end{CSLReferences}
+
+
+\end{document}

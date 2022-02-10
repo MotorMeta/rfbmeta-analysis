@@ -219,21 +219,22 @@ test <- rma.mv(yi, vi, mods = ~factor(time)-1, random = ~ 1| study/time,
                data = mvm)
 test
 
+robust(test, mvm$study)
 
 
 predict(test)
 
-profile.rma.mv(test)
+#profile.rma.mv(test)
 
 
 
 ## calculate cooks distance with 3 level model
 
-cd <- cooks.distance(test, parallel = "snow", ncpus = 4)
+#cd <- cooks.distance(test, parallel = "snow", ncpus = 4)
 
-plot(cd)
+#plot(cd)
 
-View(cd)
+#View(cd)
 
 # remove influential case
 
@@ -246,6 +247,8 @@ test2<- rma.mv(yi, vi, mods = ~factor(time)-1, random = ~ 1| study/time,
 
 
 test2
+
+robust(test2, cluster = mvm2$study)
 
 # create and save forest plot
 # order by time point
@@ -351,6 +354,8 @@ age <- rma.mv(yi, vi, mods = ~ time * age, random = ~ 1 | study/time,
               data = mvm)
 
 summary(age)
+
+
 
 # sensitivity analysis with outlier removed
 
@@ -617,8 +622,16 @@ acq_ret <- rma.mv(yi, vi, mods = ~factor(time), random = ~ 1| study/time,
 
 summary(acq_ret)
 
+robust(acq_ret, cluster = mvm$study)
 
+# conduct sensitivity analysis with outlier removed
 
+acq_ret2 <- rma.mv(yi, vi, mods = ~factor(time), random = ~ 1| study/time, 
+                  data = mvm2, btt = 2)
+
+summary(acq_ret2)
+
+robust(acq_ret2, mvm2$study)
 
 ## immediate retention vs delayed retention
 
@@ -632,7 +645,7 @@ imm_ret <- rma.mv(yi, vi, mods = ~relevel(factor(time), ref = "ImmRet"), random 
 
 summary(imm_ret)
 
-
+robust(imm_ret, mvm$study)
 
 # conduct sensitivity analysis with outlier removed
 
@@ -642,6 +655,8 @@ imm_ret2 <- rma.mv(yi, vi, mods = ~relevel(factor(time), ref = "ImmRet"), random
 # view results 
 
 summary(imm_ret2)
+
+robust(imm_ret2, mvm2$study)
 
 #------------------------------------------------------------------------
 #
@@ -677,6 +692,20 @@ coef_test(rob1, vcov = "CR2", cluster=mvm$study)
 
 conf_int(rob1, vcov = "CR2", cluster=mvm$study)
 
+## test time moderator by including intercept
+
+## fit working model (relevel time factor so that delayed retention is the reference level)
+
+rob1 <- rma.mv(yi, V, mods = ~relevel(factor(time), ref="DelayRet"),  random = ~factor(time) | study, struct = "CS", data = mvm)
+
+## use cluster-robust inference methods
+
+robust(rob1, cluster = mvm$study)
+
+coef_test(rob1, vcov = "CR2", cluster=mvm$study)
+
+conf_int(rob1, vcov = "CR2", cluster=mvm$study)
+
 
 
 
@@ -698,7 +727,17 @@ coef_test(rob15, vcov = "CR2", cluster=mvm$study)
 conf_int(rob15, vcov = "CR2", cluster=mvm$study)
 
 
+## test time moderator assuming r = 0.5
 
+rob15 <- rma.mv(yi, V, mods = ~ relevel(factor(time), ref = "DelayRet"),  random = ~factor(time) | study, struct = "CS", data = mvm)
+
+## use cluster-robust inference methods
+
+robust(rob15, cluster = mvm$study)
+
+coef_test(rob15, vcov = "CR2", cluster=mvm$study)
+
+conf_int(rob15, vcov = "CR2", cluster=mvm$study)
 
 
 
@@ -717,6 +756,40 @@ robust(rob19, cluster = mvm$study)
 coef_test(rob19, vcov = "CR2", cluster=mvm$study)
 
 conf_int(rob19, vcov = "CR2", cluster=mvm$study)
+
+
+
+## test time moderator with r = .9
+
+rob19 <- rma.mv(yi, V, mods = ~ relevel(factor(time), ref = "DelayRet"),  random = ~factor(time) | study, struct = "CS", data = mvm)
+
+## use cluster-robust inference methods
+
+robust(rob19, cluster = mvm$study)
+
+coef_test(rob19, vcov = "CR2", cluster=mvm$study)
+
+conf_int(rob19, vcov = "CR2", cluster=mvm$study)
+
+
+
+
+## test time moderator with extreme case where approximate V matrix  r = -.9 
+
+V <- impute_covariance_matrix(mvm$vi, cluster=mvm$study, r= -0.9)
+
+## fit working model
+
+robneg <- rma.mv(yi, V, mods = ~ relevel(factor(time), ref = "DelayRet"),  random = ~factor(time) | study, struct = "CS", data = mvm)
+
+## use cluster-robust inference methods
+
+robust(robneg, cluster = mvm$study)
+
+coef_test(robneg, vcov = "CR2", cluster=mvm$study)
+
+conf_int(robneg, vcov = "CR2", cluster=mvm$study)
+
 
 
 
@@ -977,6 +1050,7 @@ sensr <- rma.mv(yi, vi, mods = ~ time*rmeasure,  random = ~ 1|author.year.study/
 
 sensr
 
+
 # with influential case removed
 
 sensmeasure2 <- rma.mv(yi, vi, mods = ~ time*measure,  random = ~ 1|author.year.study/measure/time, data = ntra2)
@@ -1008,6 +1082,7 @@ summary(sensmeasure3)
 sensr3 <- rma.mv(yi, vi, mods = ~ factor(rmeasure),  random = ~ 1|author.year.study/rmeasure/time, data = ntra)
 
 sensr3
+
 
 # just at delayed retention
 
@@ -1126,6 +1201,7 @@ pres <- rma.mv(yi, vi, mods = ~factor(time)-1, random = list(~ 1 | article/study
 
 
 profile.rma.mv(pres)
+
 
 
 #----------------------------------------------------------
